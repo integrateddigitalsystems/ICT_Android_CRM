@@ -34,4 +34,7 @@ public class RequestAttchComment {
         this.comment = comment;
         this.token = token;
     }
+
+    public RequestAttchComment() {
+    }
 }

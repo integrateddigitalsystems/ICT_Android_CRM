@@ -97,6 +97,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -273,7 +274,7 @@ public class PopUpTicketActivity extends Activity {
 
         }
 
-        if (!feedback.getText().toString().equals("") || rlPicName.getVisibility() == View.VISIBLE) {
+        if (!feedback.getText().toString().equals("")/* || rlPicName.getVisibility() == View.VISIBLE*/) {
           /*  sendComment2 send = new sendComment2();
             send.execute();*/
           createToken(1);
@@ -614,7 +615,7 @@ public class PopUpTicketActivity extends Activity {
 
         if (Actions.isNetworkAvailable(PopUpTicketActivity.this)) {
 
-            if (!feedback.getText().toString().equals("") || !tvRealPath.getText().toString().equals("")) {
+            if (!feedback.getText().toString().equals("")/* || !tvRealPath.getText().toString().equals("")*/) {
 
                 createToken(1);
 
@@ -1628,81 +1629,90 @@ public class PopUpTicketActivity extends Activity {
         progressBarLayout.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.VISIBLE);
         String json="";
-        try{
-             json=new Gson().toJson(getJsonRequest(token));
-            Log.wtf("json_attach_comment",json);}catch (Exception e){
-            Log.wtf("json_exception",e.toString());
-        }
-        Call call1 = RetrofitClient.getClient().create(RetrofitInterface.class)
-                .attachCommentToTicket(getJsonRequest(token)
-                );
-        call1.enqueue(new Callback<ResponseCommentToTicket>() {
-            @Override
-            public void onResponse(Call<ResponseCommentToTicket> call, Response<ResponseCommentToTicket> response) {
-                try {
+        RequestAttchComment requestAttchComment=new RequestAttchComment();
+        requestAttchComment=getJsonRequestNew(token);
+        if(requestAttchComment==null){
+            progressBarLayout.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
+            if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
+               Toast.makeText(getApplicationContext(),"Please check uploaded file",Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(getApplicationContext(),"الرجاء التحقق من الملف",Toast.LENGTH_LONG).show();
+        }else {
+            try {
+                json = new Gson().toJson(requestAttchComment);
+                Log.wtf("json_attach_comment", json);
+            } catch (Exception e) {
+                Log.wtf("json_exception", e.toString());
+            }
+            Call call1 = RetrofitClient.getClient().create(RetrofitInterface.class)
+                    .attachCommentToTicket(requestAttchComment
+                    );
+            call1.enqueue(new Callback<ResponseCommentToTicket>() {
+                @Override
+                public void onResponse(Call<ResponseCommentToTicket> call, Response<ResponseCommentToTicket> response) {
+                    try {
 
-                    progressBarLayout.setVisibility(View.GONE);
-                    progressBar.setVisibility(View.GONE);
-                    if(!response.body().getIsFaulted()) {
-                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                         progressBarLayout.setVisibility(View.GONE);
                         progressBar.setVisibility(View.GONE);
+                        if (!response.body().getIsFaulted()) {
+                            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                            progressBarLayout.setVisibility(View.GONE);
+                            progressBar.setVisibility(View.GONE);
 
 
-                        feedback.setText("");
-                        filename = "";
-                        image = "";
+                            feedback.setText("");
+                            filename = "";
+                            image = "";
                    /*     commentlist.post(new Runnable() {
                             public void run() {
                                 commentlist.setSelection(commentlist.getCount() - 1);
                             }
                         });
                         */
-                        deletelayout.performClick();
-                        retrieveTicketComments();
-                        Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.comment_sent_success),Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+                            deletelayout.performClick();
+                            retrieveTicketComments();
+                         /*   Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.comment_sent_success), Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();*/
 
-                    }
-                    else {
-                        if(MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH)) {
+                        } else {
+                            if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH)) {
 
-                            if(MyApplication.arrayPublicMessages.size()>0){
-                                Boolean found=false;
-                                for (int i=0;i<MyApplication.arrayPublicMessages.size();i++){
-                                    if(response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
-                                        Actions.onCreateBlockedDialog(PopUpTicketActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageEn());
-                                        found=true;
-                                        break;
+                                if (MyApplication.arrayPublicMessages.size() > 0) {
+                                    Boolean found = false;
+                                    for (int i = 0; i < MyApplication.arrayPublicMessages.size(); i++) {
+                                        if (response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
+                                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageEn());
+                                            found = true;
+                                            break;
+                                        }
                                     }
+                                    if (!found)
+                                        Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "An error occured, please try again later");
+                                } else {
+                                    Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "An error occured, please try again later");
                                 }
-                                if(!found)
-                                    Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"An error occured, please try again later");
-                            }else {
-                                Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"An error occured, please try again later");
-                            }
-                        }
-                        else {
+                            } else {
 
 
-                            if(MyApplication.arrayPublicMessages.size()>0){
-                                Boolean found=false;
-                                for (int i=0;i<MyApplication.arrayPublicMessages.size();i++){
-                                    if(response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
-                                        Actions.onCreateBlockedDialog(PopUpTicketActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageAr());
-                                        found=true;
-                                        break;
+                                if (MyApplication.arrayPublicMessages.size() > 0) {
+                                    Boolean found = false;
+                                    for (int i = 0; i < MyApplication.arrayPublicMessages.size(); i++) {
+                                        if (response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
+                                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageAr());
+                                            found = true;
+                                            break;
+                                        }
                                     }
+                                    if (!found)
+                                        Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+                                } else {
+                                    Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "حصل خطأ، الرجاء اعادة المحاولة لاحقا");
                                 }
-                                if(!found)
-                                    Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");
-                            }else {
-                                Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+
+
                             }
-
-
-                        }
 
                        /* if(MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH)) {
                             if(response.body().getMessage().toLowerCase().contains("duplicate ticket")
@@ -1731,30 +1741,34 @@ public class PopUpTicketActivity extends Activity {
                         }*/
 
 
+                        }
+                    } catch (Exception e) {
+                        try {
+                            if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
+                                Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "An error occured, please try again later");
+                            else
+                                Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+                        } catch (Exception e2) {
+                        }
                     }
-                }catch (Exception e){
-                    try{
-                        if(MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
-                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"An error occured, please try again later");
-                        else
-                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");  }catch (Exception e2){}
+
                 }
 
-            }
+                @Override
+                public void onFailure(Call<ResponseCommentToTicket> call, Throwable t) {
+                    call.cancel();
+                    try {
+                        if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
+                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "An error occured, please try again later");
+                        else
+                            Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+                    } catch (Exception e) {
+                    }
+                    Log.wtf("loginerror2:", t.toString());
+                }
+            });
 
-            @Override
-            public void onFailure(Call<ResponseCommentToTicket> call, Throwable t) {
-                call.cancel();
-                try{
-                if(MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
-                   Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"An error occured, please try again later");
-                else
-                    Actions.onCreateBlockedDialog(PopUpTicketActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");  }catch (Exception e){}
-                Log.wtf("loginerror2:",t.toString());
-            }
-        });
-
-
+        }
     }
 
     private RequestAttchComment getJsonRequest(String token){
@@ -1774,7 +1788,7 @@ public class PopUpTicketActivity extends Activity {
 
                 bytesAvailable = fileInputStream.available();
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                 BitmapFactory.decodeStream(fileInputStream).compress(Bitmap.CompressFormat.JPEG, 75, bos);
+                BitmapFactory.decodeStream(fileInputStream).compress(Bitmap.CompressFormat.JPEG, 75, bos);
 
                 bufferSize = Math.min(bytesAvailable, maxBufferSize);
                 buffer = new byte[bufferSize];
@@ -1800,13 +1814,13 @@ public class PopUpTicketActivity extends Activity {
                 else if (mediaPath.contains(".pdf"))
                     filename = "Media" + System.currentTimeMillis() + ".pdf";
                 ByteArrayBody bab = new ByteArrayBody(data, filename);
-            //    attachment.setFile(bab);
+                //    attachment.setFile(bab);
                 try{
                     extention=filename.substring(filename.lastIndexOf("."));
                 }catch (Exception e){}
-             // attachment.set(MyApplication.link + "Files/" + filename);
+                // attachment.set(MyApplication.link + "Files/" + filename);
 
-              attachment=new Attachment(TicketUid,filename,filename,toUnsigned(data),null,extention);
+                attachment=new Attachment(TicketUid,filename,filename,toUnsigned(data),null,extention);
 
             } else {
 
@@ -1815,7 +1829,7 @@ public class PopUpTicketActivity extends Activity {
             }
 
         }catch (Exception e){
-           Log.wtf("exception_attachment",e.toString());
+            Log.wtf("exception_attachment",e.toString());
         }
 
 
@@ -1827,6 +1841,127 @@ public class PopUpTicketActivity extends Activity {
         RequestAttchComment requestAttchComment=new RequestAttchComment(c1,token);
         return requestAttchComment;
     }
+
+
+
+
+
+
+    private RequestAttchComment getJsonRequestNew(String token){
+
+
+        Attachment attachment=new Attachment();
+
+
+        try {
+            int bytesRead, bytesAvailable, bufferSize;
+            byte[] buffer;
+            int maxBufferSize = 110241024;
+
+            if (!mediaPath.equals("")) {
+                Log.wtf("fe", "file bg");
+                File file = new File(mediaPath);
+                FileInputStream fileInputStream = new FileInputStream(file);
+
+                long fileSizeInBytes = file.length();
+                long fileSizeInKB = fileSizeInBytes / 1024;
+                long fileSizeInMB = fileSizeInKB / 1024;
+
+                Log.wtf("filesize",fileSizeInMB+"...");
+
+
+                bytesAvailable = fileInputStream.available();
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+
+
+                if(fileSizeInBytes<1)
+                   BitmapFactory.decodeStream(fileInputStream).compress(Bitmap.CompressFormat.JPEG, 75, bos);
+                else{
+                    Bitmap bitmap= BitmapFactory.decodeStream(fileInputStream);
+                    int MAX_IMAGE_SIZE = 1000 * 1024;
+                    int streamLength = MAX_IMAGE_SIZE;
+                    int compressQuality = 105;
+                    while (streamLength >= MAX_IMAGE_SIZE && compressQuality > 5) {
+                        try {
+                            bos.flush();//to avoid out of memory error
+                            bos.reset();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        compressQuality -= 5;
+                        bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, bos);
+                        byte[] bmpPicByteArray = bos.toByteArray();
+                        streamLength = bmpPicByteArray.length;
+                        Log.wtf("stream_length",streamLength+"..");
+                    }
+
+                }
+
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                buffer = new byte[bufferSize];
+                // read file and write it into form...
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                while (bytesRead > 0) {
+
+                    bos.write(buffer, 0, bufferSize);
+                    bytesAvailable = fileInputStream.available();
+                    bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                    bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                }
+                fileInputStream.close();
+                byte[] data = bos.toByteArray();
+                String extention="";
+                if (mediaPath.contains(".jpg")) {
+                    filename = "Media" + System.currentTimeMillis()
+                            + ".jpg";
+                } else if (mediaPath.contains(".png"))
+
+                    filename = "Media" + System.currentTimeMillis()
+                            + ".png";
+                else if (mediaPath.contains(".pdf"))
+                    filename = "Media" + System.currentTimeMillis() + ".pdf";
+                ByteArrayBody bab = new ByteArrayBody(data, filename);
+                //    attachment.setFile(bab);
+                try{
+                    extention=filename.substring(filename.lastIndexOf("."));
+                }catch (Exception e){}
+                // attachment.set(MyApplication.link + "Files/" + filename);
+
+                attachment=new Attachment(TicketUid,filename,filename,toUnsigned(data),null,extention);
+
+            } else {
+
+                filename = "";
+
+            }
+
+        }catch (Exception e){
+            Log.wtf("exception_file",e.toString());
+            return null;
+        }
+
+        CommentTicket c1=new CommentTicket(TicketUid, feedback.getText().toString(),(!filename.matches("")? attachment : null));
+
+        RequestAttchComment requestAttchComment=new RequestAttchComment(c1,token);
+        return requestAttchComment;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
 
     private int unsignedIntFromByteArray(byte[] bytes) {
         int res = 0;
