@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 4.0.2">
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The drawable &quot;bg&quot; in drawable-large has no declaration in the base `drawable` folder or in a `drawable-`*density*`dpi` folder; this can lead to crashes when the drawable is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\drawable-large\bg.png"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_table_sides_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_table_sides_padding&quot;>52dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_table_top_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_table_top_padding&quot;>192dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_table_bottom_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_table_bottom_padding&quot;>33dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="6"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_table_row_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_table_row_padding&quot;>10dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_table_row_height&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_table_row_height&quot;>67dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_webview_top_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_webview_top_padding&quot;>33dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_webview_height&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_webview_height&quot;>103dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;footer_height&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;footer_height&quot;>77dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_text_left_margin&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_text_left_margin&quot;>15dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="13"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;homepage_upper_space&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;homepage_upper_space&quot;>190dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="14"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;newslist_action_bar_height&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;newslist_action_bar_height&quot;>48dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="15"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;list_image_hieght&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;list_image_hieght&quot;>112dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="16"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;list_image_width&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;list_image_width&quot;>135dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="17"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;takeaction_table_top_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;takeaction_table_top_padding&quot;>17dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="18"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;takeaction_table_left_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;takeaction_table_left_padding&quot;>50dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="19"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;takeaction_table_right_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;takeaction_table_right_padding&quot;>52dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="20"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;takeaction_table_bottom_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;takeaction_table_bottom_padding&quot;>42dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;takeaction_table_text_padding&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;takeaction_table_text_padding&quot;>10dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="22"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;eventlistsize&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;eventlistsize&quot;>27dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="23"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;textsize&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;textsize&quot;>30dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="24"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;title_width&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;title_width&quot;>300dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="25"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;title_size&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;title_size&quot;>10dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="26"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;account_size&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;account_size&quot;>12dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="27"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;push_size&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;push_size&quot;>28dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="28"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;toogle_w&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;toogle_w&quot;>80dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="29"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;webvheight&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;webvheight&quot;>850dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="30"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;toogle_h&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;toogle_h&quot;>80dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="31"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;spinner_list_text_size&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;spinner_list_text_size&quot;>25dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="32"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The dimen &quot;circlewidth&quot; in values-large has no declaration in the base `values` folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)"
+        errorLine1="    &lt;dimen name=&quot;circlewidth&quot;>5dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\values-large\dimens.xml"
+            line="33"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingDefaultResource"
+        severity="Fatal"
+        message="The drawable &quot;listicon&quot; in drawable-xlarge has no declaration in the base `drawable` folder or in a `drawable-`*density*`dpi` folder; this can lead to crashes when the drawable is queried in a configuration that does not match this qualifier"
+        category="Correctness"
+        priority="6"
+        summary="Missing Default"
+        explanation="If a resource is only defined in folders with qualifiers like `-land` or `-en`, and there is no default declaration in the base folder (`layout` or `values` etc), then the app will crash if that resource is accessed on a device where the device is in a configuration missing the given qualifier.&#xA;&#xA;As a special case, drawables do not have to be specified in the base folder; if there is a match in a density folder (such as `drawable-mdpi`) that image will be used and scaled. Note however that if you  only specify a drawable in a folder like `drawable-en-hdpi`, the app will crash in non-English locales.&#xA;&#xA;There may be scenarios where you have a resource, such as a `-fr` drawable, which is only referenced from some other resource with the same qualifiers (such as a `-fr` style), which itself has safe fallbacks. However, this still makes it possible for somebody to accidentally reference the drawable and crash, so it is safer to create a default dummy fallback in the base folder. Alternatively, you can suppress the issue by adding `tools:ignore=&quot;MissingDefaultResource&quot;` on the element.&#xA;&#xA;(This scenario frequently happens with string translations, where you might delete code and the corresponding resources, but forget to delete a translation. There is a dedicated issue id for that scenario, with the id `ExtraTranslation`.)">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\drawable-xlarge\listicon.png"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        severity="Fatal"
+        message="`@id/news_bullet` is not a sibling in the same `RelativeLayout`"
+        category="Correctness"
+        priority="6"
+        summary="Invalid Constraints"
+        explanation="Layout constraints in a given `ConstraintLayout` or `RelativeLayout` should reference other views within the same relative layout (but not itself!)"
+        errorLine1="                     android:layout_toLeftOf=&quot;@id/news_bullet&quot;"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\layout\reportsnotlist_item.xml"
+            line="29"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        severity="Fatal"
+        message="`@id/title_textView` is not a sibling in the same `RelativeLayout`"
+        category="Correctness"
+        priority="6"
+        summary="Invalid Constraints"
+        explanation="Layout constraints in a given `ConstraintLayout` or `RelativeLayout` should reference other views within the same relative layout (but not itself!)"
+        errorLine1="           android:layout_below=&quot;@id/title_textView&quot;"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\res\layout\reportsnotlist_item.xml"
+            line="38"
+            column="12"/>
+    </issue>
+
+</issues>

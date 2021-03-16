@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "254680168340",
+    "project_id": "arsel-4da45",
+    "storage_bucket": "arsel-4da45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254680168340:android:85f542eedbd50698990181",
+        "android_client_info": {
+          "package_name": "com.ids.ict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254680168340-f02a5f4ms4r0jkd8046m8jlk8pl1i8jq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBznen1nu3YHQ8ZjnyxBIATwX_Xdh2qzzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254680168340-f02a5f4ms4r0jkd8046m8jlk8pl1i8jq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

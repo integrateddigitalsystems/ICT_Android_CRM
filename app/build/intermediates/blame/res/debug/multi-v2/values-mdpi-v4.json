@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mdpi-v4\\values-mdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\values-mdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "4,6,8,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "99,184,273,139",
+                        "endColumns": "37,39,39,42",
+                        "endOffsets": "132,219,308,177"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,93,133,173",
+                        "endColumns": "37,39,39,42",
+                        "endOffsets": "88,128,168,211"
+                    }
+                }
+            ]
+        }
+    ]
+}

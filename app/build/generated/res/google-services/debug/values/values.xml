@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">284811163172-6ahov3ponkvlvus7c0eaael553pm0rsb.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://kotlinundpiraq.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">284811163172</string>
+    <string name="google_api_key" translatable="false">AIzaSyCGS2dq4v5_phlvZjamFeml2zGYLC4CSIc</string>
+    <string name="google_app_id" translatable="false">1:284811163172:android:5cebb9fb73e38c9f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCGS2dq4v5_phlvZjamFeml2zGYLC4CSIc</string>
+    <string name="google_storage_bucket" translatable="false">kotlinundpiraq.appspot.com</string>
+    <string name="project_id" translatable="false">kotlinundpiraq</string>
+</resources>

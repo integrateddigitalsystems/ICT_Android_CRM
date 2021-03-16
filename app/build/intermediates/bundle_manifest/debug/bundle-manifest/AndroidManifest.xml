@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ids.ict"
+    android:versionCode="40"
+    android:versionName="6.3" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="30" />
+    <!-- added for google maps -->
+    <permission
+        android:name="com.ids.ict.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="com.ids.ict.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!--  -->
+    <!-- push notification -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.ids.ict.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ids.ict.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" /> <!-- FOR JOB DISPATCHER -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="com.ids.ict.MyApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:testOnly="true"
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        android:usesCleartextTraffic="true" >
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
+        <activity
+            android:name="com.ids.ict.activities.webViewActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- notification -->
+        <!-- added for google maps -->
+        <activity
+            android:name="com.ids.ict.activities.QosTermsActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!--  -->
+        <activity
+            android:name="com.ids.ict.activities.SplashActivity"
+            android:configChanges="orientation|locale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ids.ict.activities.HomePageActivity"
+            android:configChanges="orientation|locale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ids.ict.activities.LanguageActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.AboutUsActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.shareActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.PermissionActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!--  -->
+
+        <activity
+            android:name="com.ids.ict.activities.NotificationDetailsActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.TwitterActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.CodeActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.ids.ict.activities.CodeNewActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.ids.ict.activities.FaqActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.SendReportActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.FailedReportActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.AboutUsPagination"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name="com.ids.ict.activities.ReportDetailsActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.NotificationListActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.ComplaintActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.CoomplaintActivityOld"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.ComplainFormActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ids.ict.classes.ArReportsNotificationListActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.ArreportActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ids.ict.classes.ArReportsListActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.MainActivity"
+            android:configChanges="orientation|locale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.ReportFailActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.Facebook1Activity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.FacebookActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.SuccessReportConfirmActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.classes.ReportsListActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.classes.ReportsNotificationListActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.SettingsNewActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ids.ict.activities.TermsActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.RegisterActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.ids.ict.activities.LoginNewActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- android:theme="@style/Theme.AppCompat.Light" -->
+
+        <activity
+            android:name="com.ids.ict.activities.reportActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ids.ict.activities.SpeedTestActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.MoreActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.toMoreActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.ConsumerActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.MyLocationActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.SpeedTestNewActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ids.ict.activities.SpeedTestFormActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ids.ict.activities.PopUpTicketActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ids.ict.activities.PopUpImageActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.ids.ict.activities.TermsConditionsPopup"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBXLAbAqDkUOtnh8D_yu7Zr8rRDlwN6iTY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.ids.ict.classes.InternetReceiver"
+            android:enabled="true" >
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.ids.ict.classes.InternetReceiver" />
+            </intent-filter>
+        </receiver> <!-- for notification -->
+
+        <service android:name="com.ids.ict.MyFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ids.ict.MyFirebaseInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+<service android:name=".services.OfflineJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        -->
+        <service
+            android:name="com.ids.ict.services.OnlineCheckJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.ids.ict.services.QosFcmJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.ids.ict.services.NetworkService" />
+        <service android:name="com.ids.ict.services.QosFcmService" />
+        <service android:name="com.ids.ict.services.QosFcmServiceTest" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/red" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0b7b08618aa79aed9193a9e1e33ccf44dd0cc1e5" />
+
+        <provider
+            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
+            android:authorities="com.ids.ict.firebaseperfprovider"
+            android:exported="false"
+            android:initOrder="101" />
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <!--
+                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+                clients to use it as well, by defining this registrar in their own core/common library.
+            -->
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <service
+            android:name="com.speedchecker.android.sdk.Services.ProbeFirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.speedchecker.android.sdk.Services.ConfigCommandJobService"
+            android:exported="true"
+            android:process=":sprobeconfig" >
+            <intent-filter android:priority="100" >
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+
+                <category android:name="uk.co.broadbandspeedchecker.probelib" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.speedchecker.android.sdk.Services.ConnectionChangedJobService"
+            android:exported="true"
+            android:process=":sprobeconnection" >
+            <intent-filter android:priority="100" >
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+
+                <category android:name="uk.co.broadbandspeedchecker.probelib" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="hivex_library_key"
+            android:value="bc4057f8ed19f83e0bc33f43b54dda5b171e5165" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             but set to not exported to explicitly avoid allowing another app to call it.
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+             Receives GooglePlay execution requests and forwards them to the
+             appropriate internal service.
+        -->
+        <service
+            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false" >
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+        </service>
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:authorities="com.ids.ict.crashlyticsinitprovider"
+            android:exported="false"
+            android:initOrder="90" /> <!-- Main hivex service -->
+        <service
+            android:name="com.hivex.service.HivexService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":hivexlibrary" /> <!-- Global hivex client service -->
+        <service
+            android:name="com.hivex.client.HivexClientService"
+            android:enabled="true"
+            android:exported="false" /> <!-- Receiver for different hivex wakeup messages (enabled by default) -->
+        <receiver
+            android:name="com.hivex.client.ReceiverHivex"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.hivex.client.WAKEUP" />
+                <action android:name="android.intent.action.ACTION_BATTERY_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

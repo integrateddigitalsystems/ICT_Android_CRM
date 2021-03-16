@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "4,6,8,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "116,199,288,155",
+                        "endColumns": "37,39,39,42",
+                        "endOffsets": "149,234,323,193"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,93,133,173",
+                        "endColumns": "37,39,39,42",
+                        "endOffsets": "88,128,168,211"
+                    }
+                }
+            ]
+        }
+    ]
+}

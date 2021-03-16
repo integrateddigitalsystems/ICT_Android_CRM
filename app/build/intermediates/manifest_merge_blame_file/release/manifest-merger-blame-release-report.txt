@@ -1,0 +1,983 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ids.ict"
+4    android:versionCode="41"
+5    android:versionName="6.4" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="17"
+8-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml
+10    <!-- added for google maps -->
+11    <permission
+11-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:5:5-7:47
+12        android:name="com.ids.ict.permission.MAPS_RECEIVE"
+12-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:6:9-59
+13        android:protectionLevel="signature" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+13-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:7:9-44
+14    <uses-permission android:name="com.ids.ict.permission.MAPS_RECEIVE" />
+14-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:8:5-75
+14-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:8:22-72
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:9:5-67
+15-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:9:22-64
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:10:5-81
+16-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+17-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:11:5-98
+17-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:11:22-95
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:12:5-81
+18-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:12:22-78
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:13:5-79
+19-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:13:22-76
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:14:5-79
+20-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:14:22-76
+21    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+21-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:15:5-76
+21-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:15:22-73
+22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+22-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:16:5-75
+22-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:16:22-72
+23    <uses-permission android:name="android.permission.WAKE_LOCK" />
+23-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:17:5-68
+23-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:17:22-65
+24    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+24-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:18:5-76
+24-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:18:22-74
+25    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+25-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:19:5-85
+25-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:19:22-82
+26
+27    <uses-feature
+27-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:20:5-22:35
+28        android:glEsVersion="0x00020000"
+28-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:21:9-41
+29        android:required="true" /> <!--  -->
+29-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:22:9-32
+30    <!-- push notification -->
+31    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+31-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:24:5-71
+31-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:24:22-68
+32    <uses-permission android:name="android.permission.WAKE_LOCK" />
+32-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:17:5-68
+32-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:17:22-65
+33
+34    <permission
+34-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:27:5-29:47
+35        android:name="com.ids.ict.permission.C2D_MESSAGE"
+35-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:28:9-58
+36        android:protectionLevel="signature" />
+36-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:29:9-44
+37
+38    <uses-permission android:name="com.ids.ict.permission.C2D_MESSAGE" />
+38-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:31:5-74
+38-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:31:22-71
+39    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+39-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:32:5-82
+39-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:32:22-79
+40    <uses-permission android:name="android.permission.VIBRATE" />
+40-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:33:5-66
+40-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:33:22-63
+41    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" /> <!-- FOR JOB DISPATCHER -->
+41-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:5-86
+41-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:22-83
+42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+42-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:5-81
+42-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:22-78
+43    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+43-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:26:5-110
+43-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:26:22-107
+44
+45    <application
+45-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:35:5-336:19
+46        android:name="com.ids.ict.MyApplication"
+46-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:36:9-38
+47        android:allowBackup="false"
+47-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:37:9-36
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.3.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\df92e20cd3a042389116d0b102bef3c2\core-1.3.0\AndroidManifest.xml:24:18-86
+49        android:fullBackupContent="false"
+49-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:39:9-42
+50        android:icon="@drawable/ic_launcher"
+50-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:40:9-45
+51        android:label="@string/app_name"
+51-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:41:9-41
+52        android:largeHeap="true"
+52-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:42:9-33
+53        android:requestLegacyExternalStorage="true"
+53-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:38:9-52
+54        android:theme="@android:style/Theme.Black.NoTitleBar"
+54-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:43:9-62
+55        android:usesCleartextTraffic="true" >
+55-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:45:9-44
+56        <meta-data
+56-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:46:9-48:36
+57            android:name="firebase_performance_logcat_enabled"
+57-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:47:13-63
+58            android:value="true" />
+58-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:48:13-33
+59
+60        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
+61        <activity
+61-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:51:9-54:52
+62            android:name="com.ids.ict.activities.webViewActivity"
+62-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:52:13-55
+63            android:configChanges="orientation|locale"
+63-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:53:13-55
+64            android:screenOrientation="portrait" />
+64-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:54:13-49
+65
+66        <uses-library
+66-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:56:9-58:40
+67            android:name="org.apache.http.legacy"
+67-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:57:13-50
+68            android:required="false" /> <!-- notification -->
+68-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:58:13-37
+69        <!-- added for google maps -->
+70        <activity
+70-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:60:9-64:55
+71            android:name="com.ids.ict.activities.QosTermsActivity"
+71-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:61:13-56
+72            android:configChanges="orientation|locale"
+72-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:62:13-55
+73            android:screenOrientation="portrait"
+73-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:63:13-49
+74            android:windowSoftInputMode="adjustPan" /> <!--  -->
+74-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:64:13-52
+75        <activity
+75-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:65:9-76:20
+76            android:name="com.ids.ict.activities.SplashActivity"
+76-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:66:13-54
+77            android:configChanges="orientation|locale"
+77-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:67:13-55
+78            android:label="@string/app_name"
+78-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:68:13-45
+79            android:screenOrientation="portrait"
+79-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:69:13-49
+80            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+80-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:70:13-71
+81            <intent-filter>
+81-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:71:13-75:29
+82                <action android:name="android.intent.action.MAIN" />
+82-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:72:17-69
+82-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:72:25-66
+83
+84                <category android:name="android.intent.category.LAUNCHER" />
+84-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:74:17-77
+84-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:74:27-74
+85            </intent-filter>
+86        </activity>
+87        <activity
+87-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:77:9-87:20
+88            android:name="com.ids.ict.activities.HomePageActivity"
+88-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:78:13-56
+89            android:configChanges="orientation|locale"
+89-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:79:13-55
+90            android:launchMode="singleTop"
+90-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:80:13-43
+91            android:screenOrientation="portrait" >
+91-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:81:13-49
+92            <intent-filter>
+92-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:82:13-86:29
+93                <action android:name="android.intent.action.MAIN" />
+93-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:72:17-69
+93-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:72:25-66
+94
+95                <category android:name="android.intent.category.DEFAULT" />
+95-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:85:17-76
+95-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:85:27-73
+96            </intent-filter>
+97        </activity>
+98        <activity
+98-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:88:9-91:52
+99            android:name="com.ids.ict.activities.LanguageActivity"
+99-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:89:13-56
+100            android:configChanges="orientation|locale"
+100-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:90:13-55
+101            android:screenOrientation="portrait" />
+101-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:91:13-49
+102        <activity
+102-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:92:9-95:52
+103            android:name="com.ids.ict.activities.AboutUsActivity"
+103-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:93:13-55
+104            android:configChanges="orientation|locale"
+104-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:94:13-55
+105            android:screenOrientation="portrait" />
+105-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:95:13-49
+106        <activity
+106-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:96:9-99:52
+107            android:name="com.ids.ict.activities.shareActivity"
+107-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:97:13-53
+108            android:configChanges="orientation|locale"
+108-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:98:13-55
+109            android:screenOrientation="portrait" />
+109-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:99:13-49
+110        <activity
+110-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:101:9-105:55
+111            android:name="com.ids.ict.activities.PermissionActivity"
+111-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:102:13-58
+112            android:configChanges="orientation|locale"
+112-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:103:13-55
+113            android:screenOrientation="portrait"
+113-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:104:13-49
+114            android:windowSoftInputMode="adjustPan" /> <!--  -->
+114-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:105:13-52
+115
+116        <activity
+116-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:107:9-110:52
+117            android:name="com.ids.ict.activities.NotificationDetailsActivity"
+117-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:108:13-67
+118            android:configChanges="orientation|locale"
+118-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:109:13-55
+119            android:screenOrientation="portrait" />
+119-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:110:13-49
+120        <activity
+120-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:111:9-114:52
+121            android:name="com.ids.ict.activities.TwitterActivity"
+121-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:112:13-55
+122            android:configChanges="orientation|locale"
+122-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:113:13-55
+123            android:screenOrientation="portrait" />
+123-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:114:13-49
+124        <activity
+124-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:115:9-119:64
+125            android:name="com.ids.ict.activities.CodeActivity"
+125-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:116:13-52
+126            android:configChanges="orientation|locale"
+126-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:117:13-55
+127            android:screenOrientation="portrait"
+127-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:118:13-49
+128            android:windowSoftInputMode="stateAlwaysVisible" />
+128-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:119:13-61
+129        <activity
+129-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:120:9-124:64
+130            android:name="com.ids.ict.activities.CodeNewActivity"
+130-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:121:13-55
+131            android:configChanges="orientation|locale"
+131-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:122:13-55
+132            android:screenOrientation="portrait"
+132-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:123:13-49
+133            android:windowSoftInputMode="stateAlwaysVisible" />
+133-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:124:13-61
+134        <activity
+134-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:125:9-128:52
+135            android:name="com.ids.ict.activities.FaqActivity"
+135-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:126:13-51
+136            android:configChanges="orientation|locale"
+136-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:127:13-55
+137            android:screenOrientation="portrait" />
+137-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:128:13-49
+138        <activity
+138-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:129:9-132:52
+139            android:name="com.ids.ict.activities.SendReportActivity"
+139-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:130:13-58
+140            android:configChanges="orientation|locale"
+140-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:131:13-55
+141            android:screenOrientation="portrait" />
+141-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:132:13-49
+142        <activity
+142-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:133:9-136:52
+143            android:name="com.ids.ict.activities.FailedReportActivity"
+143-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:134:13-60
+144            android:configChanges="orientation|locale"
+144-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:135:13-55
+145            android:screenOrientation="portrait" />
+145-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:136:13-49
+146        <activity
+146-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:137:9-141:55
+147            android:name="com.ids.ict.activities.AboutUsPagination"
+147-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:138:13-57
+148            android:configChanges="orientation|locale"
+148-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:139:13-55
+149            android:screenOrientation="portrait"
+149-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:140:13-49
+150            android:theme="@style/StyledIndicators" />
+150-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:141:13-52
+151        <activity
+151-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:142:9-145:52
+152            android:name="com.ids.ict.activities.ReportDetailsActivity"
+152-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:143:13-61
+153            android:configChanges="orientation|locale"
+153-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:144:13-55
+154            android:screenOrientation="portrait" />
+154-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:145:13-49
+155        <activity
+155-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:146:9-149:52
+156            android:name="com.ids.ict.activities.NotificationListActivity"
+156-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:147:13-64
+157            android:configChanges="orientation|locale"
+157-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:148:13-55
+158            android:screenOrientation="portrait" />
+158-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:149:13-49
+159        <activity
+159-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:150:9-153:52
+160            android:name="com.ids.ict.activities.ComplaintActivity"
+160-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:151:13-57
+161            android:configChanges="orientation|locale"
+161-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:152:13-55
+162            android:screenOrientation="portrait" />
+162-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:153:13-49
+163        <activity
+163-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:154:9-157:52
+164            android:name="com.ids.ict.activities.CoomplaintActivityOld"
+164-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:155:13-61
+165            android:configChanges="orientation|locale"
+165-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:156:13-55
+166            android:screenOrientation="portrait" />
+166-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:157:13-49
+167        <activity
+167-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:158:9-162:55
+168            android:name="com.ids.ict.activities.ComplainFormActivity"
+168-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:159:13-60
+169            android:configChanges="orientation|locale"
+169-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:160:13-55
+170            android:screenOrientation="portrait"
+170-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:161:13-49
+171            android:windowSoftInputMode="adjustPan" />
+171-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:162:13-52
+172        <activity
+172-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:163:9-166:52
+173            android:name="com.ids.ict.classes.ArReportsNotificationListActivity"
+173-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:164:13-70
+174            android:configChanges="orientation|locale"
+174-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:165:13-55
+175            android:screenOrientation="portrait" />
+175-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:166:13-49
+176        <activity
+176-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:167:9-171:63
+177            android:name="com.ids.ict.activities.ArreportActivity"
+177-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:168:13-56
+178            android:configChanges="orientation|locale"
+178-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:169:13-55
+179            android:screenOrientation="portrait"
+179-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:170:13-49
+180            android:windowSoftInputMode="stateAlwaysHidden" />
+180-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:171:13-60
+181        <activity
+181-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:172:9-175:52
+182            android:name="com.ids.ict.classes.ArReportsListActivity"
+182-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:173:13-58
+183            android:configChanges="orientation|locale"
+183-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:174:13-55
+184            android:screenOrientation="portrait" />
+184-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:175:13-49
+185        <activity
+185-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:176:9-180:52
+186            android:name="com.ids.ict.activities.MainActivity"
+186-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:177:13-52
+187            android:configChanges="orientation|locale"
+187-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:178:13-55
+188            android:launchMode="singleTop"
+188-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:179:13-43
+189            android:screenOrientation="portrait" />
+189-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:180:13-49
+190        <activity
+190-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:181:9-184:52
+191            android:name="com.ids.ict.activities.ReportFailActivity"
+191-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:182:13-58
+192            android:configChanges="orientation|locale"
+192-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:183:13-55
+193            android:screenOrientation="portrait" />
+193-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:184:13-49
+194        <activity
+194-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:185:9-188:52
+195            android:name="com.ids.ict.activities.Facebook1Activity"
+195-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:186:13-57
+196            android:configChanges="orientation|locale"
+196-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:187:13-55
+197            android:screenOrientation="portrait" />
+197-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:188:13-49
+198        <activity
+198-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:189:9-192:52
+199            android:name="com.ids.ict.activities.FacebookActivity"
+199-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:190:13-56
+200            android:configChanges="orientation|locale"
+200-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:191:13-55
+201            android:screenOrientation="portrait" />
+201-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:192:13-49
+202        <activity
+202-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:193:9-196:52
+203            android:name="com.ids.ict.activities.SuccessReportConfirmActivity"
+203-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:194:13-68
+204            android:configChanges="orientation|locale"
+204-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:195:13-55
+205            android:screenOrientation="portrait" />
+205-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:196:13-49
+206        <activity
+206-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:197:9-200:52
+207            android:name="com.ids.ict.classes.ReportsListActivity"
+207-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:198:13-56
+208            android:configChanges="orientation|locale"
+208-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:199:13-55
+209            android:screenOrientation="portrait" />
+209-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:200:13-49
+210        <activity
+210-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:201:9-204:52
+211            android:name="com.ids.ict.classes.ReportsNotificationListActivity"
+211-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:202:13-68
+212            android:configChanges="orientation|locale"
+212-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:203:13-55
+213            android:screenOrientation="portrait" />
+213-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:204:13-49
+214        <activity
+214-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:205:9-209:52
+215            android:name="com.ids.ict.activities.SettingsNewActivity"
+215-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:206:13-59
+216            android:configChanges="orientation|locale"
+216-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:207:13-55
+217            android:screenOrientation="portrait"
+217-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:209:13-49
+218            android:windowSoftInputMode="stateAlwaysHidden" />
+218-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:208:13-60
+219        <activity
+219-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:210:9-213:52
+220            android:name="com.ids.ict.activities.TermsActivity"
+220-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:211:13-53
+221            android:configChanges="orientation|locale"
+221-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:212:13-55
+222            android:screenOrientation="portrait" />
+222-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:213:13-49
+223        <activity
+223-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:214:9-218:64
+224            android:name="com.ids.ict.activities.RegisterActivity"
+224-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:215:13-56
+225            android:configChanges="orientation|locale"
+225-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:216:13-55
+226            android:screenOrientation="portrait"
+226-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:217:13-49
+227            android:windowSoftInputMode="stateAlwaysVisible" />
+227-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:218:13-61
+228        <activity
+228-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:219:9-224:63
+229            android:name="com.ids.ict.activities.LoginNewActivity"
+229-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:220:13-56
+230            android:configChanges="orientation|locale"
+230-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:221:13-55
+231            android:screenOrientation="portrait"
+231-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:222:13-49
+232            android:windowSoftInputMode="stateAlwaysHidden" />
+232-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:224:13-60
+233        <!-- android:theme="@style/Theme.AppCompat.Light" -->
+234
+235        <activity
+235-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:227:9-231:63
+236            android:name="com.ids.ict.activities.reportActivity"
+236-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:228:13-54
+237            android:configChanges="orientation|locale"
+237-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:229:13-55
+238            android:screenOrientation="portrait"
+238-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:230:13-49
+239            android:windowSoftInputMode="stateAlwaysHidden" />
+239-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:231:13-60
+240        <activity
+240-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:232:9-235:52
+241            android:name="com.ids.ict.activities.SpeedTestActivity"
+241-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:233:13-57
+242            android:configChanges="orientation|locale"
+242-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:234:13-55
+243            android:screenOrientation="portrait" />
+243-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:235:13-49
+244        <activity
+244-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:236:9-239:52
+245            android:name="com.ids.ict.activities.MoreActivity"
+245-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:237:13-52
+246            android:configChanges="orientation|locale"
+246-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:238:13-55
+247            android:screenOrientation="portrait" />
+247-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:239:13-49
+248        <activity
+248-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:240:9-243:52
+249            android:name="com.ids.ict.activities.toMoreActivity"
+249-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:241:13-54
+250            android:configChanges="orientation|locale"
+250-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:242:13-55
+251            android:screenOrientation="portrait" />
+251-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:243:13-49
+252        <activity
+252-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:244:9-247:52
+253            android:name="com.ids.ict.activities.ConsumerActivity"
+253-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:245:13-56
+254            android:configChanges="orientation|locale"
+254-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:246:13-55
+255            android:screenOrientation="portrait" />
+255-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:247:13-49
+256        <activity
+256-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:248:9-251:52
+257            android:name="com.ids.ict.activities.MyLocationActivity"
+257-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:249:13-58
+258            android:configChanges="orientation|locale"
+258-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:250:13-55
+259            android:screenOrientation="portrait" />
+259-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:251:13-49
+260        <activity
+260-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:252:9-255:52
+261            android:name="com.ids.ict.activities.SpeedTestNewActivity"
+261-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:253:13-60
+262            android:configChanges="orientation|locale"
+262-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:254:13-55
+263            android:screenOrientation="portrait" />
+263-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:255:13-49
+264        <activity
+264-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:256:9-260:55
+265            android:name="com.ids.ict.activities.SpeedTestFormActivity"
+265-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:257:13-61
+266            android:configChanges="orientation|locale"
+266-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:258:13-55
+267            android:screenOrientation="portrait"
+267-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:259:13-49
+268            android:windowSoftInputMode="adjustPan" />
+268-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:260:13-52
+269        <activity
+269-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:261:9-265:55
+270            android:name="com.ids.ict.activities.PopUpTicketActivity"
+270-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:262:13-59
+271            android:configChanges="orientation|screenSize"
+271-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:263:13-59
+272            android:theme="@android:style/Theme.Dialog"
+272-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:264:13-56
+273            android:windowSoftInputMode="adjustPan" />
+273-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:265:13-52
+274        <activity
+274-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:266:9-269:59
+275            android:name="com.ids.ict.activities.PopUpImageActivity"
+275-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:267:13-58
+276            android:configChanges="orientation|screenSize"
+276-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:268:13-59
+277            android:theme="@android:style/Theme.Dialog" />
+277-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:269:13-56
+278        <activity
+278-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:270:9-273:52
+279            android:name="com.ids.ict.activities.TermsConditionsPopup"
+279-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:271:13-60
+280            android:configChanges="orientation|locale"
+280-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:272:13-55
+281            android:screenOrientation="portrait" />
+281-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:273:13-49
+282
+283        <meta-data
+283-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:275:9-277:71
+284            android:name="com.google.android.maps.v2.API_KEY"
+284-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:276:13-62
+285            android:value="AIzaSyBXLAbAqDkUOtnh8D_yu7Zr8rRDlwN6iTY" />
+285-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:277:13-68
+286        <meta-data
+286-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:279:9-281:69
+287            android:name="com.google.android.gms.version"
+287-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:280:13-58
+288            android:value="@integer/google_play_services_version" />
+288-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:281:13-66
+289
+290        <receiver
+290-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:283:9-292:20
+291            android:name="com.ids.ict.classes.InternetReceiver"
+291-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:284:13-53
+292            android:enabled="true" >
+292-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:285:13-35
+293            <intent-filter>
+293-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:286:13-291:29
+294
+295                <!-- Intent filters for broadcast receiver -->
+296                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+296-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:289:17-79
+296-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:289:25-76
+297                <action android:name="com.ids.ict.classes.InternetReceiver" />
+297-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:290:17-79
+297-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:290:25-76
+298            </intent-filter>
+299        </receiver> <!-- for notification -->
+300
+301        <service android:name="com.ids.ict.MyFirebaseMessagingService" >
+301-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:294:9-298:19
+301-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:294:18-60
+302            <intent-filter>
+302-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:295:13-297:29
+303                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+303-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:17-78
+303-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:25-75
+304            </intent-filter>
+305        </service>
+306        <service android:name="com.ids.ict.MyFirebaseInstanceIDService" >
+306-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:300:9-304:19
+306-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:300:18-61
+307            <intent-filter>
+307-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:301:13-303:29
+308                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+308-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:302:17-80
+308-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:302:25-77
+309            </intent-filter>
+310        </service>
+311        <!--
+312<service android:name=".services.OfflineJobService"
+313            android:permission="android.permission.BIND_JOB_SERVICE" />
+314        -->
+315        <service
+315-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:309:9-311:72
+316            android:name="com.ids.ict.services.OnlineCheckJobService"
+316-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:310:13-59
+317            android:permission="android.permission.BIND_JOB_SERVICE" />
+317-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:311:13-69
+318        <service
+318-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:313:9-315:72
+319            android:name="com.ids.ict.services.QosFcmJobService"
+319-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:314:13-54
+320            android:permission="android.permission.BIND_JOB_SERVICE" />
+320-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:315:13-69
+321        <service android:name="com.ids.ict.services.NetworkService" />
+321-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:317:9-60
+321-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:317:18-57
+322        <service android:name="com.ids.ict.services.QosFcmService" />
+322-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:318:9-59
+322-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:318:18-56
+323        <service android:name="com.ids.ict.services.QosFcmServiceTest" />
+323-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:319:9-63
+323-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:319:18-60
+324
+325        <meta-data
+325-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:321:9-323:56
+326            android:name="com.google.firebase.messaging.default_notification_icon"
+326-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:322:13-83
+327            android:resource="@drawable/ic_launcher" />
+327-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:323:13-53
+328        <!--
+329 Set color used with incoming notification messages. This is used when no color is set for the incoming
+330             notification message. See README(https://goo.gl/6BKBk7) for more.
+331        -->
+332        <meta-data
+332-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:328:9-330:45
+333            android:name="com.google.firebase.messaging.default_notification_color"
+333-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:329:13-84
+334            android:resource="@color/red" />
+334-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:330:13-42
+335        <meta-data
+335-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:332:9-334:72
+336            android:name="io.fabric.ApiKey"
+336-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:333:13-44
+337            android:value="0b7b08618aa79aed9193a9e1e33ccf44dd0cc1e5" />
+337-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:334:13-69
+338
+339        <provider
+339-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:14:9-18:39
+340            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
+340-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:15:13-82
+341            android:authorities="com.ids.ict.firebaseperfprovider"
+341-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:16:13-72
+342            android:exported="false"
+342-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:17:13-37
+343            android:initOrder="101" />
+343-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:18:13-36
+344
+345        <service
+345-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:20:9-26:19
+346            android:name="com.google.firebase.components.ComponentDiscoveryService"
+346-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:21:13-84
+347            android:directBootAware="true"
+347-->[com.google.firebase:firebase-common:19.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1d10f6788d955049c5ae3b7ef665924b\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+348            android:exported="false" >
+348-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:22:13-37
+349            <meta-data
+349-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:23:13-25:85
+350                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+350-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:24:17-109
+351                android:value="com.google.firebase.components.ComponentRegistrar" />
+351-->[com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:25:17-82
+352            <meta-data
+352-->[com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:32:13-34:85
+353                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+353-->[com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:33:17-109
+354                android:value="com.google.firebase.components.ComponentRegistrar" />
+354-->[com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:34:17-82
+355            <meta-data
+355-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:39:13-41:85
+356                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+356-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:40:17-119
+357                android:value="com.google.firebase.components.ComponentRegistrar" />
+357-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:41:17-82
+358            <meta-data
+358-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:32:13-34:85
+359                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+359-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:33:17-96
+360                android:value="com.google.firebase.components.ComponentRegistrar" />
+360-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:34:17-82
+361            <meta-data
+361-->[com.google.firebase:firebase-config:20.0.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\ce4a5e59d9250b3b39ee11aab37f61f5\jetified-firebase-config-20.0.3\AndroidManifest.xml:32:13-34:85
+362                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+362-->[com.google.firebase:firebase-config:20.0.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\ce4a5e59d9250b3b39ee11aab37f61f5\jetified-firebase-config-20.0.3\AndroidManifest.xml:33:17-117
+363                android:value="com.google.firebase.components.ComponentRegistrar" />
+363-->[com.google.firebase:firebase-config:20.0.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\ce4a5e59d9250b3b39ee11aab37f61f5\jetified-firebase-config-20.0.3\AndroidManifest.xml:34:17-82
+364            <meta-data
+364-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\31b4476e3c6799c37d088453f256f45f\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:28:13-30:85
+365                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+365-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\31b4476e3c6799c37d088453f256f45f\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:29:17-115
+366                android:value="com.google.firebase.components.ComponentRegistrar" />
+366-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\31b4476e3c6799c37d088453f256f45f\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:30:17-82
+367            <meta-data
+367-->[com.google.firebase:firebase-abt:20.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b032f0b69af282c4cf411f8042d08322\jetified-firebase-abt-20.0.0\AndroidManifest.xml:13:13-15:85
+368                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+368-->[com.google.firebase:firebase-abt:20.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b032f0b69af282c4cf411f8042d08322\jetified-firebase-abt-20.0.0\AndroidManifest.xml:14:17-109
+369                android:value="com.google.firebase.components.ComponentRegistrar" />
+369-->[com.google.firebase:firebase-abt:20.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b032f0b69af282c4cf411f8042d08322\jetified-firebase-abt-20.0.0\AndroidManifest.xml:15:17-82
+370            <meta-data
+370-->[com.google.android.gms:play-services-measurement-api:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\0896e8152bb7c81485912af035f2f98f\jetified-play-services-measurement-api-18.0.1\AndroidManifest.xml:30:13-32:85
+371                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+371-->[com.google.android.gms:play-services-measurement-api:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\0896e8152bb7c81485912af035f2f98f\jetified-play-services-measurement-api-18.0.1\AndroidManifest.xml:31:17-139
+372                android:value="com.google.firebase.components.ComponentRegistrar" />
+372-->[com.google.android.gms:play-services-measurement-api:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\0896e8152bb7c81485912af035f2f98f\jetified-play-services-measurement-api-18.0.1\AndroidManifest.xml:32:17-82
+373            <meta-data
+373-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\455e007f2071edffb75b42fe0b01ef30\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+374                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+374-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\455e007f2071edffb75b42fe0b01ef30\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+375                android:value="com.google.firebase.components.ComponentRegistrar" />
+375-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\455e007f2071edffb75b42fe0b01ef30\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+376            <!--
+377                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+378                clients to use it as well, by defining this registrar in their own core/common library.
+379            -->
+380            <meta-data
+380-->[com.google.firebase:firebase-common:19.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1d10f6788d955049c5ae3b7ef665924b\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+381                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+381-->[com.google.firebase:firebase-common:19.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1d10f6788d955049c5ae3b7ef665924b\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+382                android:value="com.google.firebase.components.ComponentRegistrar" />
+382-->[com.google.firebase:firebase-common:19.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1d10f6788d955049c5ae3b7ef665924b\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+383        </service>
+384        <service
+384-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:24:9-30:19
+385            android:name="com.speedchecker.android.sdk.Services.ProbeFirebaseMessagingService"
+385-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:25:13-95
+386            android:exported="true" >
+386-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:26:13-36
+387            <intent-filter>
+387-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:295:13-297:29
+388                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+388-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:17-78
+388-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:25-75
+389            </intent-filter>
+390        </service>
+391        <service
+391-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:31:9-40:19
+392            android:name="com.speedchecker.android.sdk.Services.ConfigCommandJobService"
+392-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:32:13-89
+393            android:exported="true"
+393-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:33:13-36
+394            android:process=":sprobeconfig" >
+394-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:34:13-44
+395            <intent-filter android:priority="100" >
+395-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:13-39:29
+395-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:28-50
+396                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+396-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:17-84
+396-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:25-81
+397
+398                <category android:name="uk.co.broadbandspeedchecker.probelib" />
+398-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:17-81
+398-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:27-78
+399            </intent-filter>
+400        </service>
+401        <service
+401-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:41:9-50:19
+402            android:name="com.speedchecker.android.sdk.Services.ConnectionChangedJobService"
+402-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:42:13-93
+403            android:exported="true"
+403-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:43:13-36
+404            android:process=":sprobeconnection" >
+404-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:44:13-48
+405            <intent-filter android:priority="100" >
+405-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:13-39:29
+405-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:28-50
+406                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+406-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:17-84
+406-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:25-81
+407
+408                <category android:name="uk.co.broadbandspeedchecker.probelib" />
+408-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:17-81
+408-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:27-78
+409            </intent-filter>
+410        </service>
+411
+412        <meta-data
+412-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:57:9-59:72
+413            android:name="hivex_library_key"
+413-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:58:13-45
+414            android:value="bc4057f8ed19f83e0bc33f43b54dda5b171e5165" />
+414-->[com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:59:13-69
+415        <!--
+416             FirebaseMessagingService performs security checks at runtime,
+417             but set to not exported to explicitly avoid allowing another app to call it.
+418        -->
+419        <service
+419-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:28:9-35:19
+420            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+420-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:29:13-82
+421            android:directBootAware="true"
+421-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:30:13-43
+422            android:exported="false" >
+422-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\53332e35868ac0cfab9d844ce3bf5f6f\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:31:13-37
+423            <intent-filter android:priority="-500" >
+423-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:295:13-297:29
+424                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+424-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:17-78
+424-->D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:296:25-75
+425            </intent-filter>
+426        </service>
+427
+428        <receiver
+428-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:37:9-44:20
+429            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+429-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:38:13-78
+430            android:exported="true"
+430-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:39:13-36
+431            android:permission="com.google.android.c2dm.permission.SEND" >
+431-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:40:13-73
+432            <intent-filter>
+432-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:41:13-43:29
+433                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+433-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:42:17-81
+433-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:42:25-78
+434            </intent-filter>
+435        </receiver>
+436
+437        <activity
+437-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+438            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+438-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+439            android:exported="false"
+439-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+440            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+440-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+441        <!--
+442             Receives GooglePlay execution requests and forwards them to the
+443             appropriate internal service.
+444        -->
+445        <service
+445-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:32:9-39:19
+446            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
+446-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:33:13-73
+447            android:exported="true"
+447-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:34:13-36
+448            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+448-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:35:13-93
+449            <intent-filter>
+449-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:36:13-38:29
+450                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+450-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:17-87
+450-->[com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:25-84
+451            </intent-filter>
+452        </service>
+453        <service
+453-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+454            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+454-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+455            android:exported="false" >
+455-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+456            <meta-data
+456-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+457                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+457-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+458                android:value="cct" />
+458-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\723089ab4d8324fba52480f63e711abd\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+459        </service>
+460
+461        <receiver
+461-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:29:9-33:20
+462            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+462-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:30:13-85
+463            android:enabled="true"
+463-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:31:13-35
+464            android:exported="false" >
+464-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:32:13-37
+465        </receiver>
+466
+467        <service
+467-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:35:9-38:40
+468            android:name="com.google.android.gms.measurement.AppMeasurementService"
+468-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:36:13-84
+469            android:enabled="true"
+469-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:37:13-35
+470            android:exported="false" />
+470-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:38:13-37
+471        <service
+471-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:39:9-43:72
+472            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+472-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:40:13-87
+473            android:enabled="true"
+473-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:41:13-35
+474            android:exported="false"
+474-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:42:13-37
+475            android:permission="android.permission.BIND_JOB_SERVICE" />
+475-->[com.google.android.gms:play-services-measurement:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\149fe9bb09ac68e602c851606302d89e\jetified-play-services-measurement-18.0.1\AndroidManifest.xml:43:13-69
+476        <service
+476-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+477            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+477-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+478            android:exported="false"
+478-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+479            android:permission="android.permission.BIND_JOB_SERVICE" >
+479-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+480        </service>
+481
+482        <receiver
+482-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+483            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+483-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
+484            android:exported="false" />
+484-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\51b07bfd0dacd43604651677fec32a9b\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+485
+486        <provider
+486-->[com.crashlytics.sdk.android:crashlytics:2.9.8] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6ea1ff49b89d7cc0c507a43f691ce5f0\jetified-crashlytics-2.9.8\AndroidManifest.xml:12:9-16:38
+487            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+487-->[com.crashlytics.sdk.android:crashlytics:2.9.8] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6ea1ff49b89d7cc0c507a43f691ce5f0\jetified-crashlytics-2.9.8\AndroidManifest.xml:13:13-75
+488            android:authorities="com.ids.ict.crashlyticsinitprovider"
+488-->[com.crashlytics.sdk.android:crashlytics:2.9.8] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6ea1ff49b89d7cc0c507a43f691ce5f0\jetified-crashlytics-2.9.8\AndroidManifest.xml:14:13-75
+489            android:exported="false"
+489-->[com.crashlytics.sdk.android:crashlytics:2.9.8] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6ea1ff49b89d7cc0c507a43f691ce5f0\jetified-crashlytics-2.9.8\AndroidManifest.xml:15:13-37
+490            android:initOrder="90" /> <!-- Main hivex service -->
+490-->[com.crashlytics.sdk.android:crashlytics:2.9.8] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6ea1ff49b89d7cc0c507a43f691ce5f0\jetified-crashlytics-2.9.8\AndroidManifest.xml:16:13-35
+491        <service
+491-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:20:9-24:47
+492            android:name="com.hivex.service.HivexService"
+492-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:21:13-58
+493            android:enabled="true"
+493-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:22:13-35
+494            android:exported="false"
+494-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:23:13-37
+495            android:process=":hivexlibrary" /> <!-- Global hivex client service -->
+495-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:24:13-44
+496        <service
+496-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:27:9-30:40
+497            android:name="com.hivex.client.HivexClientService"
+497-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:28:13-63
+498            android:enabled="true"
+498-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:29:13-35
+499            android:exported="false" /> <!-- Receiver for different hivex wakeup messages (enabled by default) -->
+499-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:30:13-37
+500        <receiver
+500-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:33:9-43:20
+501            android:name="com.hivex.client.ReceiverHivex"
+501-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:34:13-58
+502            android:enabled="true"
+502-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:35:13-35
+503            android:exported="false" >
+503-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:36:13-37
+504            <intent-filter>
+504-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:37:13-42:29
+505                <action android:name="com.hivex.client.WAKEUP" />
+505-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:38:17-66
+505-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:38:25-63
+506                <action android:name="android.intent.action.ACTION_BATTERY_CHANGED" />
+506-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:39:17-87
+506-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:39:25-84
+507                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+507-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:40:17-87
+507-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:40:25-84
+508                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+508-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:41:17-90
+508-->[com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:41:25-87
+509            </intent-filter>
+510        </receiver>
+511    </application>
+512
+513</manifest>

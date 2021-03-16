@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ICT-Latest-crm-mergerd.iml" filepath="$PROJECT_DIR$/.idea/modules/ICT-Latest-crm-mergerd.iml" group="ICT-Latest-crm-mergerd" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ICT-Latest-crm-mergerd/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/latest-ICT-Latest-crm.iml" filepath="$PROJECT_DIR$/.idea/modules/latest-ICT-Latest-crm.iml" group="ICT-Latest-crm" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ldpi-v4\\values-ldpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\values-ldpi\\strings.xml",
+                    "from": {
+                        "startLines": "2,1",
+                        "startColumns": "0,4",
+                        "startOffsets": "51,17",
+                        "endColumns": "40,36",
+                        "endOffsets": "91,49"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,100",
+                        "endColumns": "44,36",
+                        "endOffsets": "95,132"
+                    }
+                }
+            ]
+        }
+    ]
+}
