@@ -10,10 +10,10 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\i.haydar
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2d3f184524644142591059540b6b0778\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c0d9ff2c8219cb7338c162fba1f7be42\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bbfc790476f552ed1d4e675fa00bf9f7\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-places:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f16de92c1e73a1e802ead9a6d55f3506\jetified-play-services-places-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:2:1-62:12
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:2:1-62:12
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4e6fb07f2904c4f67b6e8ff75502c6dc\jetified-play-services-location-17.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\7e698b7755045c70d8ae62627a6d4fcd\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
@@ -24,8 +24,8 @@ MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\i.haydar\
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.github.dmytrodanylyk.shadow-layout:library:1.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bccb7c8a9c4f5c2cc33da42f7e05bba9\jetified-library-1.0.1\AndroidManifest.xml:2:1-14:12
 MERGED from [info.hoang8f:android-segmented:1.0.6] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1aabfb4813e21c065534b9eb9ed59b43\jetified-android-segmented-1.0.6\AndroidManifest.xml:2:1-11:12
-MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\838bd9e630d91b47271528183592cc3d\jetified-library-2.4.1.1\AndroidManifest.xml:3:1-9:12
-MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:17:1-42:12
+MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\747228461fdc33c72fd649840864dc15\jetified-library-2.4.1.1\AndroidManifest.xml:3:1-9:12
+MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-core:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f1f8c6b5e8732c79b34f2ad1b9db215d\jetified-firebase-core-18.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\929507d55124b7a4bf7642c9b89eb3bf\jetified-firebase-analytics-18.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-config:20.0.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\ce4a5e59d9250b3b39ee11aab37f61f5\jetified-firebase-config-20.0.3\AndroidManifest.xml:17:1-38:12
@@ -126,8 +126,8 @@ MERGED from [com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle
 MERGED from [com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:12:5-67
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:12:5-67
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:12:5-67
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:12:5-67
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:23:5-67
@@ -172,16 +172,16 @@ ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\A
 		ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:11:22-95
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:12:5-81
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:14:5-81
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:14:5-81
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:14:5-81
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:14:5-81
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:14:5-81
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:14:5-81
 	android:name
 		ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:13:5-79
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:15:5-79
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:15:5-79
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:15:5-79
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:15:5-79
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:15:5-79
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:15:5-79
 	android:name
@@ -190,8 +190,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:14:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:13:5-79
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:13:5-79
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:13:5-79
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-iid:21.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\071954e7c52def226073f56fbfb56654\jetified-firebase-iid-21.0.1\AndroidManifest.xml:22:5-79
@@ -220,8 +220,8 @@ MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\tr
 		ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:14:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:15:5-76
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:16:5-76
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:16:5-76
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:16:5-76
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:16:5-76
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:12:5-76
 MERGED from [com.hivex:hivexlibrary:1.43.25] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\5ea9069f41efa03bec94c73329ff9e8a\jetified-hivexlibrary-1.43.25\AndroidManifest.xml:12:5-76
 	android:name
@@ -296,14 +296,14 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\i.haydar
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\de822213db331c4ad2d497f2d2ad8536\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2d3f184524644142591059540b6b0778\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2d3f184524644142591059540b6b0778\material-1.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.android.gms:play-services-places:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f16de92c1e73a1e802ead9a6d55f3506\jetified-play-services-places-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f16de92c1e73a1e802ead9a6d55f3506\jetified-play-services-places-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:23:5-60:19
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:23:5-60:19
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:23:5-60:19
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:23:5-60:19
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4e6fb07f2904c4f67b6e8ff75502c6dc\jetified-play-services-location-17.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4e6fb07f2904c4f67b6e8ff75502c6dc\jetified-play-services-location-17.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:28:5-36:19
@@ -320,8 +320,8 @@ MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.github.dmytrodanylyk.shadow-layout:library:1.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bccb7c8a9c4f5c2cc33da42f7e05bba9\jetified-library-1.0.1\AndroidManifest.xml:12:5-20
 MERGED from [com.github.dmytrodanylyk.shadow-layout:library:1.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bccb7c8a9c4f5c2cc33da42f7e05bba9\jetified-library-1.0.1\AndroidManifest.xml:12:5-20
-MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:26:5-40:19
-MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:26:5-40:19
+MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:26:5-40:19
+MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:26:5-40:19
 MERGED from [com.google.firebase:firebase-core:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f1f8c6b5e8732c79b34f2ad1b9db215d\jetified-firebase-core-18.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f1f8c6b5e8732c79b34f2ad1b9db215d\jetified-firebase-core-18.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\929507d55124b7a4bf7642c9b89eb3bf\jetified-firebase-analytics-18.0.1\AndroidManifest.xml:7:5-20
@@ -844,8 +844,8 @@ ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\A
 		ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:276:13-62
 meta-data#com.google.android.gms.version
 ADDED from D:\AndroidStudioProjects\latest\ICT-Latest-crm-mergerd\app\src\main\AndroidManifest.xml:279:9-281:69
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\cdff39098799c5ea9bf275cfe6b3798f\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\cdff39098799c5ea9bf275cfe6b3798f\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
 	android:value
@@ -946,14 +946,14 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\i.haydar\.gradle\cache
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c0d9ff2c8219cb7338c162fba1f7be42\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bbfc790476f552ed1d4e675fa00bf9f7\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bbfc790476f552ed1d4e675fa00bf9f7\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:5:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4ae2691399942a0de0b94455fb4cca79\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\9b00af55ed2ce3a534386f90c1358e1a\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:5:5-43
 MERGED from [com.google.android.gms:play-services-places:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f16de92c1e73a1e802ead9a6d55f3506\jetified-play-services-places-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f16de92c1e73a1e802ead9a6d55f3506\jetified-play-services-places-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\68ba90bce0a28adf62791d64be62b081\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:8:5-10:41
-MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:8:5-10:41
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:8:5-10:41
+MERGED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4e6fb07f2904c4f67b6e8ff75502c6dc\jetified-play-services-location-17.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\4e6fb07f2904c4f67b6e8ff75502c6dc\jetified-play-services-location-17.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:19:5-21:41
@@ -974,10 +974,10 @@ MERGED from [com.github.dmytrodanylyk.shadow-layout:library:1.0.1] C:\Users\i.ha
 MERGED from [com.github.dmytrodanylyk.shadow-layout:library:1.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\bccb7c8a9c4f5c2cc33da42f7e05bba9\jetified-library-1.0.1\AndroidManifest.xml:8:5-10:41
 MERGED from [info.hoang8f:android-segmented:1.0.6] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1aabfb4813e21c065534b9eb9ed59b43\jetified-android-segmented-1.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [info.hoang8f:android-segmented:1.0.6] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1aabfb4813e21c065534b9eb9ed59b43\jetified-android-segmented-1.0.6\AndroidManifest.xml:7:5-9:41
-MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\838bd9e630d91b47271528183592cc3d\jetified-library-2.4.1.1\AndroidManifest.xml:8:5-43
-MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\838bd9e630d91b47271528183592cc3d\jetified-library-2.4.1.1\AndroidManifest.xml:8:5-43
-MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:22:5-24:41
-MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:22:5-24:41
+MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\747228461fdc33c72fd649840864dc15\jetified-library-2.4.1.1\AndroidManifest.xml:8:5-43
+MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\747228461fdc33c72fd649840864dc15\jetified-library-2.4.1.1\AndroidManifest.xml:8:5-43
+MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:22:5-24:41
+MERGED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.firebase:firebase-core:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f1f8c6b5e8732c79b34f2ad1b9db215d\jetified-firebase-core-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\f1f8c6b5e8732c79b34f2ad1b9db215d\jetified-firebase-core-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:18.0.1] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\929507d55124b7a4bf7642c9b89eb3bf\jetified-firebase-analytics-18.0.1\AndroidManifest.xml:5:5-44
@@ -1167,62 +1167,62 @@ ADDED from [com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\
 	android:name
 		ADDED from [com.google.firebase:firebase-perf:19.1.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc5aec46f0c4d4007aae5e48c65c42f0\jetified-firebase-perf-19.1.0\AndroidManifest.xml:24:17-109
 uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:5-86
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:5-86
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:22-83
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:17:22-83
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:5-81
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:5-81
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:22-78
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:19:22-78
 service#com.speedchecker.android.sdk.Services.ProbeFirebaseMessagingService
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:24:9-30:19
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:24:9-30:19
 	android:exported
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:26:13-36
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:25:13-95
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:25:13-95
 service#com.speedchecker.android.sdk.Services.ConfigCommandJobService
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:31:9-40:19
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:31:9-40:19
 	android:process
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:34:13-44
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:34:13-44
 	android:exported
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:33:13-36
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:33:13-36
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:32:13-89
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:32:13-89
 intent-filter#action:name:com.firebase.jobdispatcher.ACTION_EXECUTE+category:name:uk.co.broadbandspeedchecker.probelib
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:13-39:29
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:13-39:29
 	android:priority
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:28-50
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:35:28-50
 action#com.firebase.jobdispatcher.ACTION_EXECUTE
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:17-84
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:17-84
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:25-81
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:36:25-81
 category#uk.co.broadbandspeedchecker.probelib
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:17-81
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:17-81
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:27-78
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:38:27-78
 service#com.speedchecker.android.sdk.Services.ConnectionChangedJobService
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:41:9-50:19
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:41:9-50:19
 	android:process
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:44:13-48
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:44:13-48
 	android:exported
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:43:13-36
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:42:13-93
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:42:13-93
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:52:9-55:35
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:52:9-55:35
 REJECTED from [com.google.firebase:firebase-common:19.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1d10f6788d955049c5ae3b7ef665924b\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
 	tools:node
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:55:13-32
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:55:13-32
 	android:authorities
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:54:13-72
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:54:13-72
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:53:13-77
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:53:13-77
 meta-data#hivex_library_key
-ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:57:9-59:72
+ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:57:9-59:72
 	android:value
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:59:13-69
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:59:13-69
 	android:name
-		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\6218c6a8fb428fb1e8bcb63fe96d3c8b\jetified-android-sdk-4.2.16\AndroidManifest.xml:58:13-45
+		ADDED from [com.speedchecker:android-sdk:4.2.16] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\fc862e41100ed316da6da57ee6c95e62\jetified-android-sdk-4.2.16\AndroidManifest.xml:58:13-45
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
 ADDED from [com.google.firebase:firebase-database:19.6.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\1786af43328c9072dce1ec384a7e5565\jetified-firebase-database-19.6.0\AndroidManifest.xml:32:13-34:85
 	android:value
@@ -1272,19 +1272,19 @@ ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\c2842c9cc40506edefc6df79824de059\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
 service#com.firebase.jobdispatcher.GooglePlayReceiver
-ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:32:9-39:19
+ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:32:9-39:19
 	android:exported
-		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:34:13-36
+		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:35:13-93
+		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:35:13-93
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:33:13-73
+		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:33:13-73
 intent-filter#action:name:com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:36:13-38:29
+ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:36:13-38:29
 action#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:17-87
+ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:17-87
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\2cc0d731c8e432fdd9720cb6263c1b73\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:25-84
+		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\b0711463b742f746203b8a72dcba18cc\jetified-firebase-jobdispatcher-0.8.5\AndroidManifest.xml:37:25-84
 meta-data#com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar
 ADDED from [com.google.firebase:firebase-config:20.0.3] C:\Users\i.haydar\.gradle\caches\transforms-2\files-2.1\ce4a5e59d9250b3b39ee11aab37f61f5\jetified-firebase-config-20.0.3\AndroidManifest.xml:32:13-34:85
 	android:value

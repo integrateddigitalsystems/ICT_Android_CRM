@@ -77,6 +77,7 @@ import com.ids.ict.MyApplication;
 import com.ids.ict.classes.Models.Customer;
 import com.ids.ict.classes.Models.RequestCreateTicket;
 import com.ids.ict.classes.Models.RequestTicket;
+import com.ids.ict.classes.Models.ResponseCreateTicket;
 import com.ids.ict.classes.Models.ResponseCreateToken;
 import com.ids.ict.classes.Models.ResponseIssues;
 import com.ids.ict.classes.Models.ResponseServiceProviders;
@@ -4889,12 +4890,15 @@ else {
         progressBarLayout.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.VISIBLE);
         Log.wtf("json_create_ticket",new Gson().toJson(getJsonCreate(token)));
+
+
+
         Call call1 = RetrofitClient.getClient().create(RetrofitInterface.class)
                 .createTickets(getJsonCreate(token));
 
-        call1.enqueue(new Callback<RetrieveIssuesResult>() {
+        call1.enqueue(new Callback<ResponseCreateTicket>() {
             @Override
-            public void onResponse(Call<RetrieveIssuesResult> call, Response<RetrieveIssuesResult> response) {
+            public void onResponse(Call<ResponseCreateTicket> call, Response<ResponseCreateTicket> response) {
 
                 progressBarLayout.setVisibility(View.GONE);
                 progressBar.setVisibility(View.GONE);
@@ -4916,7 +4920,7 @@ else {
             }
 
             @Override
-            public void onFailure(Call<RetrieveIssuesResult> call, Throwable t) {
+            public void onFailure(Call<ResponseCreateTicket> call, Throwable t) {
                 call.cancel();
             }
         });

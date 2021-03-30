@@ -4,6 +4,7 @@ import com.ids.ict.classes.Models.RequestAttchComment;
 import com.ids.ict.classes.Models.RequestCreateTicket;
 import com.ids.ict.classes.Models.RequestTicket;
 import com.ids.ict.classes.Models.ResponseCommentToTicket;
+import com.ids.ict.classes.Models.ResponseCreateTicket;
 import com.ids.ict.classes.Models.ResponseCreateToken;
 import com.ids.ict.classes.Models.ResponseIssues;
 import com.ids.ict.classes.Models.ResponseProblemCategories;
@@ -39,7 +40,7 @@ public interface RetrofitInterface {
     Call<ResponseProblemCategories> retrieveProblemCategory(@Query(ApiParameters.LANGUAGE) int language);
 
     @POST("createticket")
-    Call<RetrieveIssuesResult> createTickets(@Body RequestTicket requestCreateTicket);
+    Call<ResponseCreateTicket> createTickets(@Body RequestTicket requestCreateTicket);
 
 
     @GET("RetrieveTickets")

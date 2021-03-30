@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
@@ -37,6 +38,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -327,9 +329,43 @@ public class PopUpTicketActivity extends Activity {
                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, RESULT_LOAD_IMAGE);*/
 
+/*        final String[] ACCEPT_MIME_TYPES = {
+                "application/pdf",
+                "image/*"
+        };*/
 
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("*/*");
+        //Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+       // intent.setType("*/*");
+        //intent.setType("file/*");
+        //intent.putExtra(Intent.EXTRA_MIME_TYPES, ACCEPT_MIME_TYPES);
+       // startActivityForResult(intent, 1);
+
+
+
+
+
+        Intent intent;
+        if (android.os.Build.MANUFACTURER.equalsIgnoreCase("samsung")) {
+            intent = new Intent("com.sec.android.app.myfiles.PICK_DATA");
+            intent.putExtra("CONTENT_TYPE", "*/*");
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+        } else {
+
+            String[] mimeTypes =
+                    {"application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .doc & .docx
+                            "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.presentationml.presentation", // .ppt & .pptx
+                            "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xls & .xlsx
+                            "text/plain",
+                            "application/pdf",
+                            "application/zip", "application/vnd.android.package-archive"};
+
+            intent = new Intent(Intent.ACTION_GET_CONTENT); // or ACTION_OPEN_DOCUMENT
+            intent.setType("*/*");
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
+
+        }
         startActivityForResult(intent, 1);
 
     }
@@ -339,14 +375,19 @@ public class PopUpTicketActivity extends Activity {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 1) {
                 Log.d("select picture", "passed her");
+
                 Uri selectedMediaUri = data.getData();
+
 
                 String Fpath = selectedMediaUri.getPath();
                 String Fpath2="";
                 try{ Fpath2 =getPath(PopUpTicketActivity.this, selectedMediaUri);}catch (Exception e){}
 
-               try{ Log.wtf("Fpath", Fpath);}catch (Exception e){}
+                try{ Log.wtf("Fpath", Fpath);}catch (Exception e){}
                 try{  Log.d("Fpath", Fpath2);}catch (Exception e){}
+
+
+
 
                 filemanagerstring = selectedMediaUri.getPath();
                 Log.d("select3", "passed her");
@@ -354,6 +395,25 @@ public class PopUpTicketActivity extends Activity {
 
 
                 selectedMediaPath = getPath(PopUpTicketActivity.this, selectedMediaUri);//getPath(selectedMediaUri);
+
+                String fileExt="";
+                try{
+                Uri file = Uri.fromFile(new File(selectedMediaPath));
+                fileExt = MimeTypeMap.getFileExtensionFromUrl(file.toString()).toLowerCase();}catch (Exception e){
+
+                }
+
+                Log.wtf("file_ext",fileExt);
+                if(fileExt.matches("doc") ||
+                        fileExt.matches("docx") ||
+                        fileExt.matches("pdf") ||
+                        fileExt.matches("jpe") ||
+                        fileExt.matches("jpeg") ||
+                        fileExt.matches("jpg") ||
+                        fileExt.matches("png") ||
+                        fileExt.matches("tif") ||
+                        fileExt.matches("bmp")
+                ){
                 if(selectedMediaPath==null)
                     selectedMediaPath="";
                 Bitmap thumb;
@@ -377,14 +437,32 @@ public class PopUpTicketActivity extends Activity {
                     mediaPath = selectedMediaPath;
 
                     rlPicName.setVisibility(View.VISIBLE);
+
+
+
+
                 } catch (FileNotFoundException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
+                } }else {
+                    if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
+                        Toast.makeText(getApplicationContext(),"Invalid file format!",Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(getApplicationContext(),"نوع الملف غير مدعوم",Toast.LENGTH_LONG).show();
+
                 }
 
             }
         }
 
+    }
+
+    public String getExtension(Uri uri) {
+        String extension;
+        ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+        extension= mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+        return extension;
     }
 
     public static String getPath(Context context, Uri uri) {
@@ -950,19 +1028,31 @@ public class PopUpTicketActivity extends Activity {
 
             Log.wtf("getImageUrl", Items.get(position).getImageUrl());
            //if (!Items.get(position).getFileName().equals("") && !Items.get(position).getFileName().equals("-")) {
-             if (Items.get(position).getArrayImage()!=null && Items.get(position).getArrayImage().length>0) {
+             if (Items.get(position).getArrayImage()!=null && Items.get(position).getArrayImage().length>0 ) {
                  final byte[]dst = new byte[Items.get(position).getArrayImage().length];
                  Bitmap bmp=null;
                  Bitmap resized=null;
+
+
+
                  try{
 
+                     if (Items.get(position).getImageUrl().contains(".pdf")) {
+                         holder.ivImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.attach));
+                         holder.ivImage.setColorFilter(ContextCompat.getColor(context, R.color.black));
+                         holder.ivImage.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                     }else {
                  for (int i=0; i<Items.get(position).getArrayImage().length; i++){
                      byte b;
                      dst[i]=(byte) Items.get(position).getArrayImage()[i];
                 }
                      bmp = BitmapFactory.decodeByteArray(dst, 0,dst.length);
                      resized=Bitmap.createScaledBitmap(bmp, 500, 500, false);
-                     holder.ivImage.setImageBitmap(resized);
+                     holder.ivImage.setImageBitmap(resized);}
+
+
+
+
                  }catch (Exception e){}
 
                /* if (Items.get(position).getImageUrl().contains(".pdf")) {
@@ -1859,7 +1949,31 @@ public class PopUpTicketActivity extends Activity {
             int maxBufferSize = 110241024;
 
             if (!mediaPath.equals("")) {
-                Log.wtf("fe", "file bg");
+
+
+
+                String fileExt="";
+
+                try{
+                    Uri file = Uri.fromFile(new File(mediaPath));
+                    fileExt = MimeTypeMap.getFileExtensionFromUrl(file.toString()).toLowerCase();}catch (Exception e){
+
+                }
+
+                Log.wtf("file_ext",fileExt);
+                if(
+                        fileExt.matches("jpe") ||
+                                fileExt.matches("jpeg") ||
+                                fileExt.matches("jpg") ||
+                                fileExt.matches("png") ||
+                                fileExt.matches("tif") ||
+                                fileExt.matches("bmp")
+                ){
+
+
+
+
+                    Log.wtf("fe", "file bg");
                 File file = new File(mediaPath);
                 FileInputStream fileInputStream = new FileInputStream(file);
 
@@ -1928,6 +2042,44 @@ public class PopUpTicketActivity extends Activity {
                 // attachment.set(MyApplication.link + "Files/" + filename);
 
                 attachment=new Attachment(TicketUid,filename,filename,toUnsigned(data),null,extention);
+                }else {
+
+                     FileInputStream fis = null;
+                    try {
+                        fis = new FileInputStream(mediaPath);
+                        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                        byte[] b = new byte[1024];
+                        for (int readNum; (readNum = fis.read(b)) != -1; ) {
+                            bos.write(b, 0, readNum);
+                        }
+                        byte[] data = bos.toByteArray();
+                        String extention="";
+                        if (mediaPath.contains(".jpg")) {
+                            filename = "Media" + System.currentTimeMillis()
+                                    + ".jpg";
+                        } else if (mediaPath.contains(".png"))
+
+                            filename = "Media" + System.currentTimeMillis()
+                                    + ".png";
+                        else if (mediaPath.contains(".pdf"))
+                            filename = "Media" + System.currentTimeMillis() + ".pdf";
+                        ByteArrayBody bab = new ByteArrayBody(data, filename);
+                        //    attachment.setFile(bab);
+                        try{
+                            extention=filename.substring(filename.lastIndexOf("."));
+                        }catch (Exception e){}
+                        // attachment.set(MyApplication.link + "Files/" + filename);
+
+                        attachment=new Attachment(TicketUid,filename,filename,toUnsigned(data),null,extention);
+                    } catch (Exception e) {
+                        Log.d("mylog", e.toString());
+                    }
+
+
+                }
+
+
+
 
             } else {
 
@@ -2031,7 +2183,7 @@ public class PopUpTicketActivity extends Activity {
                 true,
                 "",
                 "",
-                "",
+                (body.getRetrieveTicketCommentsResult().getResult().get(i).getAttachment()!=null?body.getRetrieveTicketCommentsResult().getResult().get(i).getAttachment().getFileExtension().toLowerCase():""),
                 (!body.getRetrieveTicketCommentsResult().getResult().get(i).getIsUSer())+"",
                 (body.getRetrieveTicketCommentsResult().getResult().get(i).getAttachment()!=null?body.getRetrieveTicketCommentsResult().getResult().get(i).getAttachment().getFile():new int[0])
 

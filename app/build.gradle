@@ -8,8 +8,8 @@ android {
         applicationId "com.ids.ict"
         minSdkVersion 17
         targetSdkVersion 30
-        versionCode 42 // 7 // 49
-        versionName "6.5" // 2.0 //5.7
+        versionCode 43 // 7 // 49
+        versionName "6.6" // 2.0 //5.7
         multiDexEnabled true
     }
     lintOptions

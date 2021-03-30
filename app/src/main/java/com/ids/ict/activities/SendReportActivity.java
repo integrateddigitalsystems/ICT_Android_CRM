@@ -47,6 +47,7 @@ import com.ids.ict.TCTDbAdapter;
 import com.ids.ict.classes.Models.Customer;
 import com.ids.ict.classes.Models.RequestCreateTicket;
 import com.ids.ict.classes.Models.RequestTicket;
+import com.ids.ict.classes.Models.ResponseCreateTicket;
 import com.ids.ict.classes.Models.ResponseCreateToken;
 import com.ids.ict.classes.Models.ResponseMessagesTable;
 import com.ids.ict.classes.Models.ResponseUpdateTicketLocation;
@@ -1835,9 +1836,9 @@ public class SendReportActivity extends Activity {
         Call call1 = RetrofitClient.getClient().create(RetrofitInterface.class)
                 .createTickets(getJsonCreate(token));
 
-        call1.enqueue(new Callback<RetrieveIssuesResult>() {
+        call1.enqueue(new Callback<ResponseCreateTicket>() {
             @Override
-            public void onResponse(Call<RetrieveIssuesResult> call, Response<RetrieveIssuesResult> response) {
+            public void onResponse(Call<ResponseCreateTicket> call, Response<ResponseCreateTicket> response) {
 
                 progressBarLayout.setVisibility(View.GONE);
                 progressBar.setVisibility(View.GONE);
@@ -1903,8 +1904,14 @@ public class SendReportActivity extends Activity {
             }
 
             @Override
-            public void onFailure(Call<RetrieveIssuesResult> call, Throwable t) {
+            public void onFailure(Call<ResponseCreateTicket> call, Throwable t) {
                 //call.cancel();
+                try{
+                    progressBarLayout.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
+                    Actions.onCreateBlockedDialog(SendReportActivity.this,getString(R.string.error_message));}catch (Exception e2){}
+
+
             }
         });
 

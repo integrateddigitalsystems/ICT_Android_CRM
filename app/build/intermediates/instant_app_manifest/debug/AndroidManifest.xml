@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ids.ict"
     android:targetSandboxVersion="2"
-    android:versionCode="40"
-    android:versionName="6.3" >
+    android:versionCode="43"
+    android:versionName="6.6" >
 
     <uses-sdk
         android:minSdkVersion="17"
