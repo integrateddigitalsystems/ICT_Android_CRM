@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
@@ -30,6 +31,8 @@ import android.provider.MediaStore;
 import android.provider.MediaStore.MediaColumns;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -75,6 +78,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+import com.squareup.okhttp.ResponseBody;
 import com.squareup.picasso.Picasso;
 
 import org.apache.http.HttpEntity;
@@ -95,6 +99,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -102,6 +107,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -319,6 +325,9 @@ public class PopUpTicketActivity extends Activity {
                     registerLocationUpdates();
                 }
             }
+        }else if(requestCode == 2){
+           /* if(grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                convpdf();*/
         }
     }
 
@@ -1032,20 +1041,20 @@ public class PopUpTicketActivity extends Activity {
                  final byte[]dst = new byte[Items.get(position).getArrayImage().length];
                  Bitmap bmp=null;
                  Bitmap resized=null;
-
+                 for (int i=0; i<Items.get(position).getArrayImage().length; i++){
+                     byte b;
+                     dst[i]=(byte) Items.get(position).getArrayImage()[i];
+                 }
 
 
                  try{
 
-                     if (Items.get(position).getImageUrl().contains(".pdf")) {
+                     if (Items.get(position).getImageUrl().contains(".pdf") || Items.get(position).getImageUrl().contains(".doc") || Items.get(position).getImageUrl().contains(".docx")  ) {
                          holder.ivImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.attach));
                          holder.ivImage.setColorFilter(ContextCompat.getColor(context, R.color.black));
                          holder.ivImage.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                      }else {
-                 for (int i=0; i<Items.get(position).getArrayImage().length; i++){
-                     byte b;
-                     dst[i]=(byte) Items.get(position).getArrayImage()[i];
-                }
+
                      bmp = BitmapFactory.decodeByteArray(dst, 0,dst.length);
                      resized=Bitmap.createScaledBitmap(bmp, 500, 500, false);
                      holder.ivImage.setImageBitmap(resized);}
@@ -1088,18 +1097,29 @@ public class PopUpTicketActivity extends Activity {
                      @Override
                      public void onClick(View v) {
 
+                         if (Items.get(position).getImageUrl().contains(".pdf")) {
 
-                         Intent i = new Intent();
-                         i.setClass(PopUpTicketActivity.this,
-                                 PopUpImageActivity.class);
-                         Bundle b = new Bundle();
-                         String g = Items.get(position).getImageUrl();
-                         b.putString("img", g);
-                        // b.putByteArray("img_1", dst);
-                        // i.putExtra("img1", finalResized);
-                         MyApplication.intentBitmap=finalResized;
-                         i.putExtras(b);
-                         startActivity(i);
+                             convpdf(dst);
+                         }else if(Items.get(position).getImageUrl().contains(".doc") || Items.get(position).getImageUrl().contains(".docx") ) {
+                             convDoc(dst,"sample_doc."+(Items.get(position).getImageUrl().contains(".docx")?"docx":"doc"));
+                         }
+
+
+                         else {
+
+                             Intent i = new Intent();
+                             i.setClass(PopUpTicketActivity.this,
+                                     PopUpImageActivity.class);
+                             Bundle b = new Bundle();
+                             String g = Items.get(position).getImageUrl();
+                             b.putString("img", g);
+                             // b.putByteArray("img_1", dst);
+                             // i.putExtra("img1", finalResized);
+                             MyApplication.intentBitmap=finalResized;
+                             i.putExtras(b);
+                             startActivity(i);
+
+                         }
 
                      }
                  });
@@ -1235,6 +1255,159 @@ public class PopUpTicketActivity extends Activity {
         return bitMapImage;
     }
 */
+
+
+
+  private void convpdf(byte[] bytes){
+      if(isStoragePermissionGranted(PopUpTicketActivity.this)){
+          File dir = Environment.getExternalStorageDirectory();
+          File file = new File(dir,"sample.pdf");
+          try {
+              OutputStream os = new FileOutputStream(file);
+              os.write(bytes);
+              os.close();
+              viewPdf();
+             // Toast.makeText(getApplicationContext(),"created successfully",Toast.LENGTH_LONG).show();
+          }
+
+          catch (Exception e) {
+              System.out.println("Exception: " + e);
+          }
+      }
+
+
+  }
+
+
+    private void convDoc(byte[] bytes,String filename){
+        if(isStoragePermissionGranted(PopUpTicketActivity.this)){
+            File dir = Environment.getExternalStorageDirectory();
+            File file = new File(dir,filename);
+            try {
+                OutputStream os = new FileOutputStream(file);
+                os.write(bytes);
+                os.close();
+                viewDoc(filename);
+                // Toast.makeText(getApplicationContext(),"created successfully",Toast.LENGTH_LONG).show();
+            }
+
+            catch (Exception e) {
+                System.out.println("Exception: " + e);
+            }
+        }
+
+
+    }
+
+   /* private boolean writeResponseBodyToDisk(ResponseBody body) {
+        try {
+            // todo change the file location/name according to your needs
+            time.setToNow();
+            fileName = "File name" + request.getAccountNumber() + "_from" + time.format("%k : %M : %S") + ".pdf";
+            //File futureStudioIconFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName);
+            File futureStudioIconFile = new File(Environment
+                    .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                    + "/" + fileName);
+            InputStream inputStream = null;
+            OutputStream outputStream = null;
+            try {
+                byte[] fileReader = new byte[4096];
+                long fileSize = body.contentLength();
+                long fileSizeDownloaded = 0;
+                inputStream = body.byteStream();
+                outputStream = new FileOutputStream(futureStudioIconFile);
+                while (true) {
+                    int read = inputStream.read(fileReader);
+                    if (read == -1) {
+                        break;
+                    }
+                    outputStream.write(fileReader, 0, read);
+                    fileSizeDownloaded += read;
+                    Log.d("aaa", "file download: " + fileSizeDownloaded + " of " + fileSize);
+                }
+                outputStream.flush();
+                return true;
+            } catch (IOException e) {
+                return false;
+            } finally {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            }
+        } catch (IOException e) {
+            return false;
+        }
+    }
+*/
+
+    public static boolean isStoragePermissionGranted(Activity activity) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ContextCompat.checkSelfPermission(activity ,android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED)
+            //Log.v(TAG, "Permission is granted");
+            return true;
+        else {
+            //Toast.makeText(getApplicationContext(), "Permission is revoked",Toast.LENGTH_SHORT).show();
+            //Log.v(TAG, "Permission is revoked");
+            ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+            return false;}
+
+    } else { //permission is automatically granted on sdk<23 upon installation
+        //Toast.makeText(getApplicationContext(), "Permission is revoked",Toast.LENGTH_SHORT).show();
+        //Log.v(TAG, "Permission is granted");
+        return true;
+    }
+}
+
+
+    // Method for opening a pdf file
+    private void viewPdf(/*String file, String directory*/) {
+
+       // File pdfFile = new File(Environment.getExternalStorageDirectory() + "/" + directory + "/" + file);
+        File pdfFile = new File(Environment.getExternalStorageDirectory() + "/sample.pdf");
+      //  Uri path = Uri.fromFile(pdfFile);
+        Uri path = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
+
+        // Setting the intent for pdf reader
+        Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+        pdfIntent.setDataAndType(path, "application/pdf");
+        pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        pdfIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        try {
+            startActivity(pdfIntent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(PopUpTicketActivity.this, "Can't read pdf file", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+    private void viewDoc(String filename/*String file, String directory*/) {
+
+        // File pdfFile = new File(Environment.getExternalStorageDirectory() + "/" + directory + "/" + file);
+        File pdfFile = new File(Environment.getExternalStorageDirectory() + "/"+ filename);
+       // Uri path = Uri.fromFile(pdfFile);
+        Uri path = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
+
+        // Setting the intent for pdf reader
+        Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+        pdfIntent.setDataAndType(path, "application/msword");
+        pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        pdfIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        try {
+            startActivity(pdfIntent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(PopUpTicketActivity.this, "Can't read pdf file", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+
+
     public static byte[] int2byte(int[]src) {
         int srcLength = src.length;
         byte[]dst = new byte[srcLength << 2];
@@ -1833,6 +2006,8 @@ public class PopUpTicketActivity extends Activity {
 
                         }
                     } catch (Exception e) {
+                        progressBarLayout.setVisibility(View.GONE);
+                        progressBar.setVisibility(View.GONE);
                         try {
                             if (MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH))
                                 Actions.onCreateBlockedDialog(PopUpTicketActivity.this, "An error occured, please try again later");
@@ -2063,6 +2238,10 @@ public class PopUpTicketActivity extends Activity {
                                     + ".png";
                         else if (mediaPath.contains(".pdf"))
                             filename = "Media" + System.currentTimeMillis() + ".pdf";
+                        else if (mediaPath.contains(".docx"))
+                            filename = "Media" + System.currentTimeMillis() + ".docx";
+                        else if (mediaPath.contains(".doc"))
+                            filename = "Media" + System.currentTimeMillis() + ".doc";
                         ByteArrayBody bab = new ByteArrayBody(data, filename);
                         //    attachment.setFile(bab);
                         try{

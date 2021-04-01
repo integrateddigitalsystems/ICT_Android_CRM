@@ -33,7 +33,7 @@ public class PopUpImageActivity extends Activity {
 
         Log.wtf("path",path);
 
-   /*     if(path.contains("pdf")){
+        if(path.contains("pdf")){
 
             WindowManager.LayoutParams params = getWindow().getAttributes();
             params.height = (int) (MyApplication.screenHeight / 1.2);
@@ -42,7 +42,7 @@ public class PopUpImageActivity extends Activity {
             mWebView.getSettings().setJavaScriptEnabled(true);
             mWebView.loadUrl("https://docs.google.com/gview?embedded=true&url="+path);
             setContentView(mWebView);
-        }else{*/
+        }else{
    try{
    if(MyApplication.intentBitmap!=null){
             WindowManager.LayoutParams params = getWindow().getAttributes();
@@ -56,7 +56,7 @@ public class PopUpImageActivity extends Activity {
            img.setImageBitmap(MyApplication.intentBitmap);}catch (Exception e){}
 
    }}catch (Exception e){}
-     //   }
+       }
     }
 
     @Override
