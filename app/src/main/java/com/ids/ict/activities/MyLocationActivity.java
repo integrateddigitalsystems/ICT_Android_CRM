@@ -2072,13 +2072,15 @@ public class MyLocationActivity extends FragmentActivity implements LocationList
             }
         });}else {
             Call call1 = RetrofitClient.getClient().create(RetrofitInterface.class)
-                    .retrieveTicketLocations();
+                    .retrieveTicketLocations("");
             call1.enqueue(new Callback<ResponseRetrieveTicketLocations>() {
                 @Override
                 public void onResponse(Call<ResponseRetrieveTicketLocations> call, Response<ResponseRetrieveTicketLocations> response) {
                     try {
                         setIssueTypes(response.body());
-                    }catch (Exception e){}
+                    }catch (Exception e){
+                        Log.wtf("exception",e.toString());
+                    }
 
                 }
 
@@ -2217,9 +2219,12 @@ public class MyLocationActivity extends FragmentActivity implements LocationList
 
             String iconname = Actions.imageNameClean(pins.get(i).getPinIcon());
             if (!iconname.trim().equals("")) {
+                try{
                 location = new LatLng(Double.parseDouble(pins.get(i)
                         .getLocationY()), Double.parseDouble(pins.get(i)
-                        .getLocationX()));
+                        .getLocationX()));}catch (Exception e){
+                    location = new LatLng(0,0);
+                }
 
                 if (googleMap != null) {
 

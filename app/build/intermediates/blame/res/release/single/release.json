@@ -2080,6 +2080,10 @@
         "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\drawable-xhdpi\\grey.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\res\\merged\\release\\xml_provider_paths.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\res\\merged\\release\\drawable-xlarge_network_en.png.flat",
         "source": "D:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\src\\main\\res\\drawable-xlarge\\network_en.png"
     },

@@ -1,4 +1,4 @@
-#Thu Mar 25 09:45:04 EET 2021
+#Tue Apr 13 08:50:08 EEST 2021
 base.0=D\:\\AndroidStudioProjects\\latest\\ICT-Latest-crm-mergerd\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

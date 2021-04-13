@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ids.ict"
     android:targetSandboxVersion="2"
-    android:versionCode="43"
-    android:versionName="6.6" >
+    android:versionCode="46"
+    android:versionName="6.9" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -54,6 +54,16 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@android:style/Theme.Black.NoTitleBar"
         android:usesCleartextTraffic="true" >
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ids.ict.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
