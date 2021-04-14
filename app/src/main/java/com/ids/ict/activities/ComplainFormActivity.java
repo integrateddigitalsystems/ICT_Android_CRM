@@ -106,9 +106,11 @@ import org.xml.sax.InputSource;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -3845,7 +3847,8 @@ public class ComplainFormActivity extends FragmentActivity implements TextWatche
     protected void onResume() {
         super.onResume();
         lang = Actions.setLocalComplaint(this);
-
+        if(MyApplication.arrayPublicMessages.isEmpty())
+            Actions.fetchRemote(this);
     }
 
 
@@ -4914,13 +4917,55 @@ else {
                         intent.putExtras(bundle);
                         startActivity(intent);}else
                     {
-                        Toast.makeText(getApplicationContext(),response.body().getMessage()+"",Toast.LENGTH_LONG).show();
+
+
+                        if(MyApplication.Lang.equalsIgnoreCase(MyApplication.ENGLISH)) {
+
+                            if(MyApplication.arrayPublicMessages.size()>0){
+                                Boolean found=false;
+                                for (int i=0;i<MyApplication.arrayPublicMessages.size();i++){
+                                    if(response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
+                                        Actions.onCreateBlockedDialog(ComplainFormActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageEn());
+                                        found=true;
+                                        break;
+                                    }
+                                }
+                                if(!found)
+                                    Actions.onCreateBlockedDialog(ComplainFormActivity.this,"An error occured, please try again later");
+                            }else {
+                                Actions.onCreateBlockedDialog(ComplainFormActivity.this,"An error occured, please try again later");
+                            }
+                        }
+                        else {
+
+
+                            if(MyApplication.arrayPublicMessages.size()>0){
+                                Boolean found=false;
+                                for (int i=0;i<MyApplication.arrayPublicMessages.size();i++){
+                                    if(response.body().getMessage().toLowerCase().contains(MyApplication.arrayPublicMessages.get(i).getValidation_key())) {
+                                        Actions.onCreateBlockedDialog(ComplainFormActivity.this, MyApplication.arrayPublicMessages.get(i).getMessageAr());
+                                        found=true;
+                                        break;
+                                    }
+                                }
+                                if(!found)
+                                    Actions.onCreateBlockedDialog(ComplainFormActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+                            }else {
+                                Actions.onCreateBlockedDialog(ComplainFormActivity.this,"حصل خطأ، الرجاء اعادة المحاولة لاحقا");
+                            }
+
+
+                        }
+
+
+                      //  Toast.makeText(getApplicationContext(),response.body().getMessage()+"",Toast.LENGTH_LONG).show();
                     }}catch (Exception e){}
                 // Toast.makeText(getApplicationContext(),response.body().getIsFaulted()+"",Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<ResponseCreateTicket> call, Throwable t) {
+                try{ Actions.onCreateBlockedDialog(ComplainFormActivity.this,getString(R.string.error_message));}catch (Exception e2){}
                 call.cancel();
             }
         });
@@ -4948,7 +4993,7 @@ else {
                 "",
                 "",
                 profile_email,
-                contactNum,
+                number.getText().toString(),
                 isIndividual.equalsIgnoreCase("true")? "2" : "1",
                 isIndividual.equalsIgnoreCase("true")? "1" : "0",
                 profile_qatarID,
@@ -4958,13 +5003,20 @@ else {
 
         );
         String spCompStatus="2";
- /*       if (spComplaint.equalsIgnoreCase("4"))
+        try{
+        if (spComplaint.equalsIgnoreCase("4"))
             spCompStatus= "3" ;
         else if(spComplaint.equalsIgnoreCase("4") && closed)
             spCompStatus="1";
-        else
-            spCompStatus= "2";*/
+        else spCompStatus= "2";}catch (Exception e){}
 
+        String crrrNubr="";
+
+        if (isCorporate.equalsIgnoreCase("true")) {
+            crrrNubr= qidEdt.getText().toString();
+        } else {
+            crrrNubr="";
+        }
 
         String spChannel;
         switch (channelusedid){
@@ -4992,7 +5044,15 @@ else {
             default:
                 spChannel=null;
         }
+        String cmpldateTs="";
+        try{
+            DateFormat formatter = new SimpleDateFormat("yyyy-M-dd",Locale.US);
+            Date date1 = (Date)formatter.parse(date);
+            cmpldateTs="/Date("+date1.getTime()+")/";
 
+        }catch (Exception e){
+
+        }
         RequestCreateTicket requestCreate=new RequestCreateTicket(
                 myCustomer,
                 (IssueType.matches("2"))? 1 : 2,
@@ -5003,6 +5063,18 @@ else {
                 number.getText().toString(),
                 isSpecialNeed,
                 spCompStatus,
+                referenceNumbertext.getText().toString(),
+                cmpldateTs,
+                "/Date("+System.currentTimeMillis()+")/",
+                crrrNubr,
+                number.getText().toString(),
+                callNumEdt.getText().toString(),
+                spChannel,
+                complaint.getText().toString(),
+                latitude+"",
+                longitude+""
+/*                spCompStatus,
+                cm
                 null,
                 null,
                 null,
@@ -5012,9 +5084,10 @@ else {
                 spChannel,
                 spComplaint,
                 latitude+"",
-                longitude+""
+                longitude+""*/
 
         );
+
         RequestTicket jsonToSend=new RequestTicket(requestCreate,token);
         return jsonToSend;
 
