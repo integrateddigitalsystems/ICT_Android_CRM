@@ -2221,8 +2221,8 @@ public class MyLocationActivity extends FragmentActivity implements LocationList
             if (!iconname.trim().equals("")) {
                 try{
                 location = new LatLng(Double.parseDouble(pins.get(i)
-                        .getLocationY()), Double.parseDouble(pins.get(i)
-                        .getLocationX()));}catch (Exception e){
+                        .getLocationX()), Double.parseDouble(pins.get(i)
+                        .getLocationY()));}catch (Exception e){
                     location = new LatLng(0,0);
                 }
 
